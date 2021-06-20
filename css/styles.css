@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap");
+body {
+  font-family: "Noto Sans SC", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  background: linear-gradient(to bottom right, #2e71d4, 40%, #d189b9);
+  height: 100%;
+  width: 100%;
+  background-color: #111;
+  transition: all 0.6s;
+}
+
+.sidebar {
+  height: 100%;
+  width: 267px;
+  background-image: linear-gradient(to bottom, #ffff, #b9b9b9);
+  padding: 17px transparent;
+  color: #565656;
+  border-radius: 7px;
+  transform: translate3d(-100%, 0px, 0px);
+  visibility: visible;
+  transition: all 0.45s ease 0s;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    border-radius: 0px;
+    }
+}
+
+ul {
+    padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #565656;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  height: 100%;
+  float: center;
+}
+
+li {
+  margin-bottom: 6px;
+  transition: transform 0.22s;
+  transform: scale(1);
+}
+
+li:hover {
+  transform: scale(1.15);
+}
+
+.borger {
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 7px;
+  z-index: 999;
+  transition: transform 0.22s;
+  transform: scale(0.85);
+}
+
+.borger:hover {
+  transform: scale(1.04);
+}
+
+.hidden {
+  transform: translate3d(0px, 0px, 0px);
+  visibility: visible;
+}
+
+.darktoggle {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #8d8d8d;
+  color: white;
+  transition: background-color 0.25s;
+  min-width: 60px;
+  font-family: "Ubuntu";
+  vertical-align: top;
+  margin-top: 10px;
+  margin-left: 2px;
+  align-items: center;
+  transition: transform 0.22s;
+  transform: scale(1);
+}
+
+.darktoggle:active {
+  background-color: rgb(78, 78, 78);
+}
+
+.darktoggle:hover {
+  transform: scale(1.1);
+}
