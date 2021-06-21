@@ -1,31 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap");
 body {
-  font-family: "Noto Sans SC", sans-serif;
-  padding: 0px;
-  margin: 0px;
-  background: linear-gradient(to bottom right, #2e71d4, 40%, #d189b9);
-  height: 100%;
-  width: 100%;
-  background-color: #111;
-  transition: all 0.6s;
+    font-family: "Noto Sans SC", sans-serif;
+    padding: 0px;
+    margin: 0px;
+    background: linear-gradient(to bottom right, #2e71d4, 40%, #d189b9);
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+    transition: all 0.6s;
+}
+
+* {
+    transition: color 0.6s;
 }
 
 .sidebar {
-  height: 100%;
-  width: 267px;
-  background-image: linear-gradient(to bottom, #ffff, #b9b9b9);
-  padding: 17px transparent;
-  color: #565656;
-  border-radius: 7px;
-  transform: translate3d(-100%, 0px, 0px);
-  visibility: visible;
-  transition: all 0.45s ease 0s;
+    height: 100%;
+    width: 267px;
+    /*background-image: linear-gradient(to bottom, #ffff, #b9b9b9);*/
+    background-color: #e9e9e9;
+    color: #565656;
+    border-radius: 7px;
+    transform: translate3d(-100%, 0px, 0px);
+    visibility: visible;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.25s;
+    z-index: 8889999999999999999888;
 }
 
 @media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    border-radius: 0px;
+    .sidebar {
+        width: 100%;
+        border-radius: 0px;
     }
 }
 
@@ -34,71 +42,123 @@ ul {
 }
 
 a {
-  text-decoration: none;
-  color: #565656;
+    text-decoration: none;
+    color: #565656;
 }
 
 .items {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: space-between;
-  height: 100%;
-  float: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    height: 100%;
+    float: center;
 }
 
 li {
-  margin-bottom: 6px;
-  transition: transform 0.22s;
-  transform: scale(1);
+    margin-bottom: 6px;
+    transition: transform 0.22s;
+    transform: scale(1);
 }
 
 li:hover {
-  transform: scale(1.15);
+    transform: scale(1.15);
 }
 
 .borger {
-  position: absolute;
-  top: 5px;
-  left: 7px;
-  background-color: white;
-  padding: 5px;
-  border-radius: 7px;
-  z-index: 999;
-  transition: transform 0.22s;
-  transform: scale(0.85);
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 7px;
+    z-index: 999;
+    transition: transform 0.22s;
+    transform: scale(0.85);
+    z-index: 888888000000;
 }
 
 .borger:hover {
-  transform: scale(1.04);
+    transform: scale(1.04);
 }
 
 .hidden {
-  transform: translate3d(0px, 0px, 0px);
-  visibility: visible;
+    transform: translate3d(0px, 0px, 0px);
+    visibility: visible;
 }
 
 .darktoggle {
-  padding: 5px;
-  border: none;
-  border-radius: 5px;
-  background-color: #8d8d8d;
-  color: white;
-  transition: background-color 0.25s;
-  min-width: 60px;
-  font-family: "Ubuntu";
-  vertical-align: top;
-  margin-top: 10px;
-  margin-left: 2px;
-  align-items: center;
-  transition: transform 0.22s;
-  transform: scale(1);
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8d8d8d;
+    color: white;
+    transition: background-color 0.25s;
+    min-width: 60px;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-left: 2px;
+    align-items: center;
+    transition: transform 0.22s;
+    transform: scale(1);
 }
 
 .darktoggle:active {
-  background-color: rgb(78, 78, 78);
+    background-color: rgb(78, 78, 78);
 }
 
 .darktoggle:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+div.content {
+    top: 0px;
+    width: calc(100% - 20px);
+    height: calc(100% - 40px);
+    right: 0px;
+    color: White;
+    position: fixed;
+    transition: width 0.45s, opacity 0.1s, right 0.45s;
+    padding-left: 20px;
+    z-index: 1;
+}
+
+div.content>h1#titleText {
+    margin-top: 2px;
+    transition: margin-left 0.45s;
+    margin-left: 41.5px;
+    margin-bottom: 10px;
+}
+
+div.content>p {
+    margin: 2.5px 0;
+}
+
+div.content>h1#titleText.sideBarOpened {
+    margin-left: 0px;
+}
+
+div.content>div.centerAligned {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transition: opacity 1s, right 1s;
+}
+
+div.content>div.centerAligned p {
+    margin: 0px;
+}
+
+div.content>div.centerAligned h1 {
+    margin: 0px;
+    margin-top: 20px;
+}
+
+div.content.sideBarOpened {
+    width: calc(100% - 287px);
 }

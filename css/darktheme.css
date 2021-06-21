@@ -1,43 +1,47 @@
 body.isdark {
-  background: linear-gradient(to bottom right, rgb(15, 54, 87), #885d84);
-  color: #797979;
+    background: linear-gradient(to bottom right, rgb(15, 54, 87), #885d84);
+    color: #797979;
 }
 
 body.isdark .sidebar {
-  background: linear-gradient(to bottom, rgb(53, 54, 56), rgb(39, 40, 44));
-  color: #797979;
+    /*background-image: linear-gradient(to bottom, rgb(53, 54, 56), rgb(39, 40, 44));*/
+    background-color: rgb(39, 40, 44);
+    color: #797979;
 }
 
 body.isdark a {
-  color: #797979;
+    color: #797979;
 }
 
 body.isdark .borger {
-  background-color: rgb(53, 54, 56);
-  color: white;
+    background-color: rgb(53, 54, 56);
+    color: white;
 }
 
 body.isdark .darktoggle {
-  padding: 5px;
-  border: none;
-  border-radius: 5px;
-  background-color: #797979;
-  color: rgb(53, 54, 56);
-  transition: background-color 0.25s;
-  min-width: 60px;
-  font-family: "Ubuntu";
-  vertical-align: top;
-  margin-top: 10px;
-  margin-left: 2px;
-  align-items: center;
-  transition: transform 0.22s;
-  transform: scale(1);
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #797979;
+    color: rgb(53, 54, 56);
+    transition: background-color 0.25s;
+    min-width: 60px;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-left: 2px;
+    align-items: center;
+    transition: transform 0.22s;
+    transform: scale(1);
 }
 
-body.isdark .darktoggle:hover{
+body.isdark .darktoggle:hover {
     transform: scale(1.1);
 }
 
 body.isdark .darktoggle:active {
-  background-color: rgb(78, 78, 78);
+    background-color: rgb(78, 78, 78);
+}
+
+body.isdark .content {
+    color: #bfbfbf;
 }
