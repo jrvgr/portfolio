@@ -8,6 +8,10 @@ body {
     width: 100%;
     background-color: #111;
     transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -webkit-transition: all 0.6s;
 }
 
 * {
@@ -27,6 +31,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     transition: all 0.25s;
+    -o-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
     z-index: 8889999999999999999888;
 }
 
@@ -56,13 +64,26 @@ a {
 }
 
 li {
+    list-style-type: none;
     margin-bottom: 6px;
     transition: transform 0.22s;
+    -o-transition: transform 0.22s;
+    -ms-transition: transform 0.22s;
+    -moz-transition: transform 0.22s;
+    -webkit-transition: transform 0.22s;
     transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
 }
 
 li:hover {
-    transform: scale(1.15);
+    transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
 }
 
 .borger {
@@ -75,15 +96,27 @@ li:hover {
     z-index: 999;
     transition: transform 0.22s;
     transform: scale(0.85);
+    -o-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    -webkit-transform: scale(0.85);
     z-index: 888888000000;
 }
 
 .borger:hover {
     transform: scale(1.04);
+    -o-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -webkit-transform: scale(1.04);
 }
 
 .hidden {
     transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate3d(0px, 0px, 0px);
+    -ms-transform: translate3d(0px, 0px, 0px);
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
     visibility: visible;
 }
 
@@ -119,6 +152,10 @@ div.content {
     color: White;
     position: fixed;
     transition: width 0.45s, opacity 0.1s, right 0.45s;
+    -o-transition: width 0.45s, opacity 0.1s, right 0.45s;
+    -ms-transition: width 0.45s, opacity 0.1s, right 0.45s;
+    -moz-transition: width 0.45s, opacity 0.1s, right 0.45s;
+    -webkit-transition: width 0.45s, opacity 0.1s, right 0.45s;
     padding-left: 20px;
     z-index: 1;
 }
