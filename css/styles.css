@@ -11,8 +11,8 @@ body {
   background-size: cover;
   background-size: 600% 600%;
   min-height: 100%;
-  animation: gradientani 9s ease infinite;
-  -moz-animation: AnimationName 28s ease infinite;
+  animation: gradientani 28s ease infinite;
+  -moz-animation: gradientani 28s ease infinite;
 }
 
 .navbar a {
@@ -138,12 +138,6 @@ body.skills-page .navbar .skills-link {
 }
 
 @keyframes gradientani {
-  0%{background-position:2% 0%}
-  50%{background-position:99% 100%}
-  100%{background-position:2% 0%}
-}
-
-@-moz-keyframes AnimationName {
   0%{background-position:2% 0%}
   50%{background-position:99% 100%}
   100%{background-position:2% 0%}
