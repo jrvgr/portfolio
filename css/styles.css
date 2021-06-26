@@ -7,7 +7,7 @@ body {
     rgb(48, 108, 213),
     #dd77d3
   );
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
 }
