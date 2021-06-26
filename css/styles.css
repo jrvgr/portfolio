@@ -11,7 +11,8 @@ body {
   background-size: cover;
   background-size: 600% 600%;
   min-height: 100vh;
-  animation: gradientani 28s ease infinite;
+  animation: gradientani 15s ease infinite;
+  overflow-y: hidden;
 }
 
 .navbar a {
