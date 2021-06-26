@@ -9,7 +9,7 @@ body {
   );
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  min-height: 100%;
 }
 
 .navbar a {
@@ -37,8 +37,9 @@ body {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 11px 9px;
   text-decoration: none;
+  margin-left:3px;
 }
 
 .navbar li :hover {
@@ -119,6 +120,18 @@ h1 {
   color: white;
   align-items: center;
   padding-left: 5px;
+}
+
+body.home-page .navbar .home-link {
+  border-bottom: 2px solid white;
+  border-radius: 5px;
+  background-color: rgba(133, 133, 133, 0.4)
+}
+
+body.skills-page .navbar .skills-link {
+  border-bottom: 2px solid white;
+  border-radius: 5px;
+  background-color: rgba(133, 133, 133, 0.4)
 }
 
 @media (max-width: 768px) {
