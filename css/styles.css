@@ -10,9 +10,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-size: 600% 600%;
-  min-height: 100%;
+  min-height: 100vh;
   animation: gradientani 28s ease infinite;
-  -moz-animation: gradientani 28s ease infinite;
 }
 
 .navbar a {
