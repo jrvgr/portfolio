@@ -9,9 +9,10 @@ body {
   );
   background-repeat: no-repeat;
   background-size: cover;
-  background-size: 400% 400%;
+  background-size: 600% 600%;
   min-height: 100%;
   animation: gradientani 9s ease infinite;
+  -moz-animation: AnimationName 28s ease infinite;
 }
 
 .navbar a {
