@@ -3,13 +3,15 @@
 body {
   font-family: "Noto Sans JP", sans-serif;
   background-image: linear-gradient(
-    to bottom right,
-    rgb(48, 108, 213),
+    329deg,
+    #306cd5,
     #dd77d3
   );
   background-repeat: no-repeat;
   background-size: cover;
+  background-size: 200% 200%;
   min-height: 100%;
+  animation: gradientani 9s ease infinite;
 }
 
 .navbar a {
@@ -132,6 +134,12 @@ body.skills-page .navbar .skills-link {
   border-bottom: 2px solid white;
   border-radius: 5px;
   background-color: rgba(133, 133, 133, 0.4)
+}
+
+@keyframes gradientani {
+  0%{background-position:2% 0%}
+  50%{background-position:99% 100%}
+  100%{background-position:2% 0%}
 }
 
 @media (max-width: 768px) {
