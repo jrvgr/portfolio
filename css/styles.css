@@ -2,38 +2,37 @@
 
 body {
   font-family: "Noto Sans JP", sans-serif;
-  background-image: linear-gradient(
+  background-image:linear-gradient(
     to bottom right,
     rgb(48, 108, 213),
     #dd77d3
   );
-  filter:blur(10%);
 }
 
-a{
+
+.navbar a{
   transition: transform 0.22s;
   transform: scale(1.0);
+  
 }
 
-ul {
+.navbar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: rgb(51, 51, 51, 0.5);
-  width: fit-content;
+  width: 100%;
   display: flex;
   align-items: center;
   border-radius: 5px;
-  padding-right: 5px;
-  transition: width 0.6s;
 }
 
-li {
+.narvbar li {
   float: left;
 }
 
-li a{
+.navbar li a{
   display: block;
   color: white;
   text-align: center;
@@ -41,12 +40,12 @@ li a{
   text-decoration: none;
 }
 
-li :hover {
+.navbar li :hover {
   background-color: rgb(17, 17, 17, 0.7);
   border-radius: 5px;
 }
 
-a:hover{
+.navbar a:hover{
   transform: scale(0.9);
 }
 
@@ -57,7 +56,7 @@ a:hover{
   justify-content: center;
   align-items: center;
   display: flex;
-  transition: all 0.6s;
+  transition: all 1s;
 }
 
 .navico:hover{
@@ -86,6 +85,43 @@ h1{
   align-items: center;
 }
 
+.socials i{
+  transform: scale(1);
+  transition: transform 0.4s;
+}
+
+.socials i:hover{
+  transform: scale(0.9);
+}
+
+.socials{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  padding-top:40px
+}
+
+.socials a{
+  padding: 7px;
+  text-decoration: none;
+  color:white;
+  margin-top: 8px;
+}
+
+.socials a:first-of-type{
+  border-right: 2px solid white;
+}
+
+.hide{
+  font-size:25px;
+  color:white;
+  align-items: center;
+  padding-left:5px;
+}
+
+
+
 @media (max-width: 768px){
   ul{
     width:100%;
@@ -94,5 +130,11 @@ h1{
   }
   .content{
     flex-direction: column;
+  }
+  .hide{
+    display:none
+  }
+  .socials{
+    padding-top:0px;
   }
 }
