@@ -2,21 +2,19 @@
 
 body {
   font-family: "Noto Sans JP", sans-serif;
-  background-image:linear-gradient(
+  background-image: linear-gradient(
     to bottom right,
     rgb(48, 108, 213),
     #dd77d3
   );
   background-repeat: none;
   background-size: cover;
-  height:100%
+  height: 100%;
 }
 
-
-.navbar a{
+.navbar a {
   transition: transform 0.22s;
-  transform: scale(1.0);
-  
+  transform: scale(1);
 }
 
 .navbar ul {
@@ -35,7 +33,7 @@ body {
   float: left;
 }
 
-.navbar li a{
+.navbar li a {
   display: block;
   color: white;
   text-align: center;
@@ -48,7 +46,7 @@ body {
   border-radius: 5px;
 }
 
-.navbar a:hover{
+.navbar a:hover {
   transform: scale(0.9);
 }
 
@@ -62,82 +60,80 @@ body {
   transition: all 1s;
 }
 
-.navico:hover{
-  transform:rotate(360deg)
+.navico:hover {
+  transform: rotate(360deg);
 }
 
 .content {
   display: flex;
   align-items: center;
-  color:white;
+  color: white;
   justify-content: center;
   margin-top: 50px;
 }
 
 .main-image {
-  height:240px;
+  height: 240px;
 }
 
-.main-text{
+.main-text {
   text-align: center;
-  margin:20px
+  margin: 20px;
 }
 
-h1{
-  margin:5px;
+h1 {
+  margin: 5px;
   align-items: center;
 }
 
-.socials i{
+.socials i {
   transform: scale(1);
   transition: transform 0.4s;
 }
 
-.socials i:hover{
+.socials i:hover {
   transform: scale(0.9);
 }
 
-.socials{
-  display:flex;
+.socials {
+  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 50px;
-  padding-top:40px
+  padding-top: 40px;
 }
 
-.socials a{
+.socials a {
   padding: 7px;
   text-decoration: none;
-  color:white;
+  color: white;
   margin-top: 8px;
 }
 
-.socials a:first-of-type{
+.socials a:first-of-type {
   border-right: 2px solid white;
 }
 
-.hide{
-  font-size:25px;
-  color:white;
+.hide {
+  font-size: 25px;
+  color: white;
   align-items: center;
-  padding-left:5px;
+  padding-left: 5px;
 }
 
-
-
-@media (max-width: 768px){
-  ul{
-    width:100%;
-    margin:0;
-    padding:0;
+@media (max-width: 768px) {
+  ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
-  .content{
+  .content {
     flex-direction: column;
   }
-  .hide{
-    display:none
+  .hide {
+    display: none;
   }
-  .socials{
-    padding-top:0px;
+  .socials {
+    padding-top: 0px;
   }
 }
