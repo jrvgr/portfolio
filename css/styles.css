@@ -2,11 +2,7 @@
 
 body {
   font-family: "Noto Sans JP", sans-serif;
-  background-image: linear-gradient(
-    329deg,
-    #306cd5,
-    #dd77d3
-  );
+  background-image: linear-gradient(329deg, #306cd5, #dd77d3);
   background-repeat: no-repeat;
   background-size: cover;
   background-size: 600% 600%;
@@ -42,7 +38,7 @@ body {
   text-align: center;
   padding: 11px 9px;
   text-decoration: none;
-  margin-left:3px;
+  margin-left: 3px;
 }
 
 .navbar li :hover {
@@ -128,23 +124,29 @@ h1 {
 body.home-page .navbar .home-link {
   border-bottom: 2px solid white;
   border-radius: 5px;
-  background-color: rgba(133, 133, 133, 0.4)
+  background-color: rgba(133, 133, 133, 0.4);
 }
 
 body.skills-page .navbar .skills-link {
   border-bottom: 2px solid white;
   border-radius: 5px;
-  background-color: rgba(133, 133, 133, 0.4)
+  background-color: rgba(133, 133, 133, 0.4);
 }
 
-.guessilldie{
-  height:30vh
+.guessilldie {
+  height: 30vh;
 }
 
 @keyframes gradientani {
-  0%{background-position:2% 0%}
-  50%{background-position:99% 100%}
-  100%{background-position:2% 0%}
+  0% {
+    background-position: 2% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 2% 0%;
+  }
 }
 
 @media (max-width: 768px) {
