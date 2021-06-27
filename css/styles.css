@@ -137,6 +137,10 @@ body.skills-page .navbar .skills-link {
   background-color: rgba(133, 133, 133, 0.4)
 }
 
+.guessilldie{
+  height:30vh
+}
+
 @keyframes gradientani {
   0%{background-position:2% 0%}
   50%{background-position:99% 100%}
