@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background-image: linear-gradient(329deg, #306cd5, #dd77d3);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 600% 600%;
+  min-height: calc(100vh -10px);
+  animation: gradientani 15s ease infinite;
+}
+.content p {
+  margin: 0;
+}
+
+.right-items {
+  display: flex;
+  align-items: center;
+  padding: 0 6 0 0;
+}
+
+.right-items li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 11px 9px;
+  text-decoration: none;
+  margin-left: 3px;
+}
+
+.right-items a {
+  transition: transform 0.22s;
+  transform: scale(1);
+}
+
+.right-items li :hover {
+  background-color: rgb(17, 17, 17, 0.7);
+  border-radius: 5px;
+}
+
+.left-items {
+  display: flex;
+  align-items: center;
+}
+
+.left-items a {
+  transition: transform 0.22s;
+  transform: scale(1);
+}
+
+.right-items a:hover {
+  transform: scale(0.9);
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(51, 51, 51, 0.5);
+  width: 100%;
+  display: inline-flex;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-items li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 11px 9px;
+  text-decoration: none;
+  margin-left: 3px;
+}
+
+.left-items li :hover {
+  background-color: rgb(17, 17, 17, 0.7);
+  border-radius: 5px;
+}
+
+.left-items a:hover {
+  transform: scale(0.9);
+}
+
+.navico {
+  height: 55px;
+  padding: 5px;
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transition: all 1s;
+}
+
+.navico:hover {
+  transform: rotate(360deg);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.main-image {
+  height: 240px;
+}
+
+.main-text {
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  margin: 5px;
+  align-items: center;
+}
+
+.socials i {
+  transform: scale(1);
+  transition: transform 0.4s;
+}
+
+.socials i:hover {
+  transform: scale(0.9);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  padding-top: 40px;
+}
+
+.socials a {
+  padding: 7px;
+  text-decoration: none;
+  color: white;
+  margin-top: 8px;
+}
+
+.hide {
+  font-size: 25px;
+  color: white;
+  align-items: center;
+  padding-left: 5px;
+}
+
+body.home-page .navbar .home-link {
+  border-bottom: 2px solid white;
+  border-radius: 5px;
+  background-color: rgba(133, 133, 133, 0.4);
+}
+
+body.skills-page .navbar .skills-link {
+  border-bottom: 2px solid white;
+  border-radius: 5px;
+  background-color: rgba(133, 133, 133, 0.4);
+}
+
+body.login-page .navbar .login-link {
+  border-bottom: 2px solid white;
+  border-radius: 5px;
+  background-color: rgba(133, 133, 133, 0.4);
+}
+
+.guessilldie {
+  height: 30vh;
+}
+
+.login input {
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  border-radius: 5px;
+  border-color: white;
+  border-style: none;
+  margin-bottom: 5px;
+  text-align: center;
+  transition: transform 0.22s;
+  transform: scale(1);
+}
+
+.login input:hover {
+  transform: scale(0.9);
+}
+
+.button {
+  padding: 0px;
+  border-radius: 5px;
+  border-color: white;
+  border-style: none;
+  margin-bottom: 5px;
+  transition: transform 0.22s;
+  transform: scale(1);
+  list-style: none;
+  background-color: white;
+}
+
+.button input::placeholder{
+  text-decoration-color: black;
+}
+
+.button a{
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+  text-decoration: none;
+  color: rgb(130, 130, 130);
+}
+
+.button:hover {
+  transform: scale(0.9);
+  color: rgb(0, 132, 255);
+}
+
+@keyframes gradientani {
+  0% {
+    background-position: 2% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 2% 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .hide {
+    display: none;
+  }
+  .socials {
+    padding-top: 0px;
+  }
+}
