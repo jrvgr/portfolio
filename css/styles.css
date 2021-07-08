@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 
+html body{
+  min-height: 100vh;
+}
+
 body {
   font-family: "Noto Sans JP", sans-serif;
   background-image: linear-gradient(329deg, #306cd5, #dd77d3);
   background-repeat: no-repeat;
   background-size: cover;
-  background-size: 600% 600%;
+  background-size: 1000% 1000%;
   min-height: calc(100vh -10px);
   animation: gradientani 15s ease infinite;
 }
