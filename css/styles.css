@@ -209,12 +209,14 @@ body.login-page .navbar .login-link {
   text-decoration-color: black;
 }
 
-.button a{
+.button button{
   display: flex;
   justify-content: center;
   padding: 4px;
   text-decoration: none;
   color: rgb(130, 130, 130);
+  width: 100%;
+  cursor: pointer;
 }
 
 .button:hover {
