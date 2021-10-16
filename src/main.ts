@@ -1,6 +1,6 @@
-import './style.css'
-
-
+import './style.scss'
+import { createIcons, icons } from 'lucide';
+createIcons({icons});
 
 const darkmode = function() {
   const darkmode:HTMLSpanElement = document.querySelector('.darkmode .navtext')!
@@ -11,7 +11,7 @@ const darkmode = function() {
     localStorage.setItem('darkmode','true')}
   else {
     darkmode.innerText = 'Dark Mode'
-    localStorage.clear}
+    localStorage.clear()}
 } 
 
 document.querySelector('.darkmode')!.addEventListener('click', darkmode)
