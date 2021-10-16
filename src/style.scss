@@ -11,24 +11,18 @@ body{
   --button-border: #00485e;
   --nav-background: rgb(69, 142, 184, 1);
   
-  .sun {
-    display:none
-  }
-  .moon{
+  .moon, .sun{
     display: none;
   }
   
   @media (max-width: 768px) {
-    .sun {
-    display:none
-    }
     .moon{
      display: block;
     }
   }
 
   .ico{
-    filter: grayscale(0%) invert(0%);
+    filter: none;
     transition: all 0.6s;
   }
 }
@@ -41,19 +35,13 @@ body.dark{
   --button-border: #151515;
   --nav-background: rgb(67, 67, 67);
 
-  .sun {
-    display:none
-  }
-  .moon{
+  .moon, .sun{
     display: none;
   }
   
   @media (max-width: 768px) {
     .sun {
     display:block;
-    }
-    .moon{
-      display: none;
     }
   }
 
@@ -64,15 +52,14 @@ body.dark{
 }
 
 .navbar{
-  transition: all 1s;
-  transition: ease all 1s;
+  transition: ease all 2s;
   transform: translateY(0%); 
 
   @media (max-width: 768px) {  
     position: fixed;    
     transform: translateY(calc(100vh - 4.8rem));
     width: 100%;
-    transition: ease all 1s;
+    transition: ease all 2s;
   }
 }
 
@@ -91,6 +78,13 @@ body.dark{
 .left-items{
   display: flex;
   align-items: center;
+  transition: all 2s;
+
+  @media (max-width: 768px) {
+    .nav-item {
+      transform: translateX(0rem);
+    } 
+  }
 }
 
 .right-items{
@@ -101,28 +95,17 @@ body.dark{
 .nav-item{
   margin-left: 1rem;
   padding: 0rem;
-  a{
+  a, button{
     display: inline-block;
     color: white;
     text-decoration: none dotted;
     background: var(--button-background);
     padding: 1rem 1.3rem 0.6rem ;
+    border-style: none;
     border-radius: 0.3rem;
     border-bottom: var(--button-border) solid 0.4rem;
     box-shadow: 0.0rem 0.0rem transparent;
     transition: all ease 0.2s;
-  }
-  button{
-  display: inline-block;
-  color: white;
-  text-decoration: none dotted;
-  background: var(--button-background);
-  padding: 1rem 1.3rem 0.6rem ;
-  border-radius: 0.3rem;
-  border-style: none;
-  border-bottom: var(--button-border) solid 0.4rem;
-  box-shadow: 0.0rem 0.0rem transparent;
-  transition: all ease 0.2s;
   }
 
   @media (max-width: 768px)
@@ -133,27 +116,17 @@ body.dark{
 
 
   }
-  a:hover{
+  a, button:hover{
     box-shadow: 0.3rem 0.3rem rgb(0, 0, 0, 0.2);
     transform: translateX(-0.3rem) translateY(-0.3rem);
     border-bottom: var(--button-border) solid 0.4rem;
     text-decoration: underline;
   }
-  a:active{
+  a, button:active{
   box-shadow: 0.0rem 0.0rem transparent;
   transform: inherit;
-  }
+}
 
-  button:hover{
-    box-shadow: 0.3rem 0.3rem rgb(0, 0, 0, 0.2);
-    transform: translateX(-0.3rem) translateY(-0.3rem);
-    border-bottom: var(--button-border) solid 0.4rem;
-    text-decoration: underline;
-  }
-  button:active{
-  box-shadow: 0.0rem 0.0rem transparent;
-  transform: inherit;
-  }
 
 .navicon{
   display: none;
@@ -177,11 +150,19 @@ body.dark{
     width: 4rem;
     padding: 0%;
     margin: 0px;
-    transition: cubic-bezier(.68,-0.55,.07,1.01) all 5s;
+    transform: translateX(0);
+    transition: ease transform 0.2s;
+    transition: ease width 0.3s;
+
+    @media (max-width: 768px) {
+      width: 0;
+      transition: all 1s;
+    }
   }
-  
-  @media (max-width: 768px) {  
-    display: none;
+
+  @media (max-width: 768px) {
+    transform: translateX(-5rem);
+    transition: ease all 0.5s;
   }
 
 }
