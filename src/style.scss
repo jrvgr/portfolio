@@ -1,10 +1,10 @@
 html{
-  // height: 90vh;
+  height: 100%;
   font-size: 16px;
 }
 
 body{
-  height: 90%;
+  min-height: 100%;
   margin: 0%;
   transition: all ease 0.2s;
   --button-background: #005a76;
@@ -63,17 +63,17 @@ body.dark{
   }
 }
 
-@media (max-width: 768px) {  
-  .navbar {
-  position: fixed;    
-  bottom:0px;
-  width: 100%;
-  transition: all 1s;
-  }
-}
-
 .navbar{
   transition: all 1s;
+  transition: ease all 1s;
+  transform: translateY(0%); 
+
+  @media (max-width: 768px) {  
+    position: fixed;    
+    transform: translateY(calc(100vh - 4.8rem));
+    width: 100%;
+    transition: ease all 1s;
+  }
 }
 
 .navbar-nav{
