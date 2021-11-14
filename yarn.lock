@@ -147,10 +147,10 @@ is-number@^7.0.0:
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
 
-lucide@^0.16.11:
-  version "0.16.11"
-  resolved "https://registry.yarnpkg.com/lucide/-/lucide-0.16.11.tgz#e9a10cb7487fb90c4785508274324d2fb7ed35f5"
-  integrity sha512-QlQesiQchxNs4BRoVE8+I0rCgBJUn46Zylr/51MAXJvJlUblA/ovIwB18l0CnUVFfQAmZ5gyBF81Zca+3y4bIQ==
+lucide@^0.16.12:
+  version "0.16.14"
+  resolved "https://registry.yarnpkg.com/lucide/-/lucide-0.16.14.tgz#81e62b8b7c47312aad781bba8f96d0e968ba63b5"
+  integrity sha512-OcksPq2XKG+UpPev6ia9SyXzMocz4aNlSK+fDh311jXEKP0yYuVBIOoKPtxMgbTkrSXYmoMkFf8lxdcm8k3kwg==
 
 nanocolors@^0.2.2:
   version "0.2.11"
