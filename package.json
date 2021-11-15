@@ -11,10 +11,11 @@
     "vite": "^2.5.4"
   },
   "dependencies": {
-    "autoprefixer": "^10.3.6",
-    "lucide": "^0.16.11",
-    "postcss": "^8.3.9",
-    "sass": "^1.42.1",
+
+    "autoprefixer": "^10.3.7",
+    "lucide": "^0.16.12",
+    "postcss": "^8.3.8",
+    "sass": "^1.43.2",
     "scss": "^0.2.4"
   },
   "main": "index.js",
