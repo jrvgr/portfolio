@@ -11,6 +11,7 @@
     "vite": "^2.5.4"
   },
   "dependencies": {
+
     "autoprefixer": "^10.3.7",
     "lucide": "^0.16.15",
     "postcss": "^8.3.8",
