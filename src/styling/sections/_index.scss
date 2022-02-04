@@ -8,7 +8,7 @@ main{
   flex-direction: column;
 }
 
-//make sure items don't shrink to fit main
+//make sure items don't shrink to fit main and transition properly
 .section{
   flex-shrink: 0;
   transition: background 0.7s ease;

@@ -1,22 +1,22 @@
-@media (hover: hover) {
+@media screen and (hover) {
 	@keyframes jump {
-		0%{
+		0% {
 			transform: translateY(0);
 		}
 
-		25%{
+		25% {
 			transform: translateY(-10px);
 		}
 
-		50%{
+		50% {
 			transform: translateY(0);
 		}
 
-		75%{
+		75% {
 			transform: translateY(-10px);
 		}
 
-		100%{
+		100% {
 			transform: translateY(0);
 		}
 	}
@@ -64,23 +64,20 @@
 		}
 	}
 
-	// @media (min-width: 768px) {
-	.nav__item {
-		// transition: all 1s ease;
-	}
+	@media (pointer: fine) {
+		.nav__item svg {
+			display: block;
+			color: var(--nav-items);
+		}
 
-	.nav__item svg {
-		display: block;
-		color: var(--nav-items);
-	}
-
-	.nav__item::before {
-		content: "";
-		width: 0.8rem;
-		height: 0.8rem;
-		background: var(--nav-items);
-		display: block;
-		margin: 0.35rem;
-		border-radius: 100%;
+		.nav__item::before {
+			content: "";
+			width: 0.8rem;
+			height: 0.8rem;
+			background: var(--nav-items);
+			display: block;
+			margin: 0.35rem;
+			border-radius: 100%;
+		}
 	}
 }

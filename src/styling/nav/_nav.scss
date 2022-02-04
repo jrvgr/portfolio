@@ -74,14 +74,14 @@ body {
 
 	.nav__icon {
 		color: var(--nav-items);
-		@media (hover: hover) {
+		@media screen and (pointer: fine) {
 			transform: scale(0);
 		}
 	}
 }
 
 //only if poiting device is present
-@media (hover: hover) {
+@media screen and(pointer: fine) {
 	.nav__item:hover,
 	.nav__item:focus {
 		&::before {

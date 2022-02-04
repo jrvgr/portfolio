@@ -15,9 +15,14 @@ body .darkToggle {
 }
 
 body .darkToggle {
-	&:hover {
-		transition: 0.1s ease;
-		transform: scale(80%);
+	@media screen and (pointer: fine) {
+		&:hover {
+			transition: 0.1s ease;
+			transform: scale(80%);
+		}
+		&:active {
+			transform: scale(100%);
+		}
 	}
 	&:active {
 		transition: transform 0.1s ease;
@@ -26,18 +31,18 @@ body .darkToggle {
 }
 
 body .darkToggle {
-  position: absolute;
-  top: -40px;
-  right: 14px;
-  width: var(--nav-size);
-  height: var(--nav-size);
+	position: absolute;
+	top: -40px;
+	right: 14px;
+	width: var(--nav-size);
+	height: var(--nav-size);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100%;
-  background-color: transparent;
-  border: none;
+	background-color: transparent;
+	border: none;
 	@media (min-width: 1200px) {
-    position: initial;
+		position: initial;
 		cursor: pointer;
 	}
 }
