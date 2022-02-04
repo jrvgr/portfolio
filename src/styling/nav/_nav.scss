@@ -74,7 +74,9 @@ body {
 
 	.nav__icon {
 		color: var(--nav-items);
-		transform: scale(0);
+		@media (hover: hover) {
+			transform: scale(0);
+		}
 	}
 }
 
