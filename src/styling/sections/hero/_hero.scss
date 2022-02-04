@@ -1,0 +1,57 @@
+@use "keyframes";
+
+#hero {
+	padding: 0 4vw;
+	height: 100%;
+	background: var(--hero-background);
+	.content {
+		margin-top: 10%;
+		color: var(--hero-font);
+		z-index: 999;
+		overflow: hidden;
+
+		h1 {
+			font-size: 3.5rem;
+			margin-top: 0.3rem;
+			margin-bottom: 0.5rem;
+		}
+
+		p {
+			font-size: 1.5rem;
+			max-width: 16ch;
+			margin: 0.3rem 0;
+		}
+
+		@media (min-width: 1200px) {
+			& {
+				transform: translateY(25vh);
+				margin: 0;
+				h1 {
+					font-size: 5rem;
+				}
+				p {
+					font-size: 2rem;
+					margin: 0.3rem 0;
+				}
+			}
+		}
+	}
+
+	.Arrow svg {
+		margin-top: 30vh;
+		color: var(--hero-font);
+		transition: all 1s ease;
+		width: 2.5rem;
+		height: 2.5rem;
+		@media (prefers-reduced-motion: no-preference) {
+			animation: float 4s ease-in-out infinite;
+			@media (min-width: 1200px) {
+				&:hover {
+					animation: float paused;
+					padding-top: 10px;
+				}
+				margin-top: 40vh;
+			}
+		}
+	}
+}

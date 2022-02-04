@@ -1,0 +1,43 @@
+body.dark .darkToggle {
+	background-image: url(/sun.svg);
+	filter: brightness(0) saturate(100%) invert(99%) sepia(24%) saturate(3046%)
+		hue-rotate(325deg) brightness(109%) contrast(102%);
+	transition: transform 0.5s ease;
+	transform: scale(90%);
+}
+
+body .darkToggle {
+	background-image: url(/moon.svg);
+	filter: brightness(0) saturate(100%) invert(13%) sepia(82%) saturate(1978%)
+		hue-rotate(212deg) brightness(97%) contrast(93%);
+	transition: transform 0.5s ease;
+	transform: scale(90%);
+}
+
+body .darkToggle {
+	&:hover {
+		transition: 0.1s ease;
+		transform: scale(80%);
+	}
+	&:active {
+		transition: transform 0.1s ease;
+		transform: scale(95%);
+	}
+}
+
+body .darkToggle {
+  position: absolute;
+  top: -40px;
+  right: 14px;
+  width: var(--nav-size);
+  height: var(--nav-size);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+  background-color: transparent;
+  border: none;
+	@media (min-width: 1200px) {
+    position: initial;
+		cursor: pointer;
+	}
+}

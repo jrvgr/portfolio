@@ -1,0 +1,14 @@
+body {
+  --nav-background: #e2e2e2;
+  --nav-items: #131313;
+  --hero-background: #f1f1f1;
+  --hero-font: #131313;
+  --nav-size: 2.5rem;
+}
+
+body.dark {
+  --nav-items: #e2e2e2;
+  --nav-background: #434242;
+  --hero-font: #f1f1f1;
+  --hero-background: #242424;
+}

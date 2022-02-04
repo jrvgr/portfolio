@@ -1,0 +1,100 @@
+@use "logo";
+@use "keyframes";
+@use "darktoggle";
+
+body {
+	display: flex;
+	flex-direction: column-reverse;
+	@media (min-width: 1200px) {
+		flex-direction: row;
+	}
+}
+
+.main__nav {
+	margin: 0;
+	height: max-content;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	background: var(--nav-background);
+	position: sticky;
+	transition: background 1s ease;
+
+	@media (min-width: 1200px) {
+		width: 4rem;
+		flex-direction: column;
+		height: 100%;
+	}
+	nav {
+		display: flex;
+		flex-direction: column;
+		margin: 1vh 0;
+		height: inherit;
+		width: inherit;
+		align-items: inherit;
+		@media (min-width: 1200px) {
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+	.nav__list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		list-style: none;
+		padding: 0.5rem 0;
+		margin: 0;
+		@media (min-width: 1200px) {
+			flex-direction: column;
+			padding: 0;
+			gap: 0.7rem;
+			justify-content: center;
+			width: 100%;
+		}
+	}
+	.nav__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding: inherit;
+		outline: 1px var(--nav-items);
+	}
+	.logo,
+	.nav__text {
+		display: none;
+	}
+
+	@media (min-width: 1200px) {
+		.darkToggle,
+		.logo {
+			display: initial;
+		}
+	}
+
+	.nav__icon {
+		color: var(--nav-items);
+	}
+}
+
+//only if poiting device is present
+@media (hover: hover) {
+	.nav__item:hover,
+	.nav__item:focus {
+		&::before {
+			animation: out 0.2s linear 0s normal both;
+		}
+		.nav__icon {
+			animation: in 0.2s linear 0s normal both;
+		}
+	}
+
+	.nav__item {
+		&::before {
+			animation: in 0.2s linear 0s normal both;
+		}
+		.nav__icon {
+			animation: out 0.2s linear 0s normal both;
+		}
+	}
+}

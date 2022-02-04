@@ -1,0 +1,90 @@
+@use "keyframes";
+
+.logo {
+	display: initial;
+	width: 3rem;
+	height: max-content;
+	overflow: hidden;
+	@media (prefers-reduced-motion: no-preference) {
+		animation: jump 1s ease 1s;
+	}
+}
+
+.logo svg {
+	width: 5rem;
+	height: inherit;
+	transition: transform 1s ease;
+	overflow: hidden;
+}
+
+body {
+	.logo,
+	.logo * {
+		transition: all 0.5s ease;
+	}
+	.logo {
+		#background {
+			filter: brightness(0) saturate(100%) invert(98%) sepia(6%) saturate(366%)
+				hue-rotate(235deg) brightness(112%) contrast(77%);
+		}
+		#V {
+			filter: brightness(0) saturate(100%) invert(22%) sepia(14%) saturate(16%)
+				hue-rotate(344deg) brightness(95%) contrast(83%);
+		}
+		#I * {
+			filter: brightness(0) saturate(100%) invert(98%) sepia(6%) saturate(366%)
+				hue-rotate(235deg) brightness(112%) contrast(77%);
+		}
+		#R * {
+			filter: brightness(0) saturate(100%) invert(98%) sepia(6%) saturate(366%)
+				hue-rotate(235deg) brightness(112%) contrast(77%);
+		}
+		#Ellipse-6 {
+			filter: brightness(0) saturate(100%) invert(22%) sepia(14%) saturate(16%)
+				hue-rotate(344deg) brightness(95%) contrast(83%);
+		}
+	}
+}
+
+body.dark {
+	.logo {
+		#background {
+			filter: brightness(0) saturate(100%) invert(22%) sepia(14%) saturate(16%)
+				hue-rotate(344deg) brightness(95%) contrast(83%);
+		}
+		#V {
+			filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+				hue-rotate(350deg) brightness(104%) contrast(102%);
+		}
+		#I * {
+			filter: brightness(0) saturate(100%) invert(22%) sepia(14%) saturate(16%)
+				hue-rotate(344deg) brightness(95%) contrast(83%);
+		}
+		#R * {
+			filter: brightness(0) saturate(100%) invert(22%) sepia(14%) saturate(16%)
+				hue-rotate(344deg) brightness(95%) contrast(83%);
+		}
+		#Ellipse-6 {
+			filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+				hue-rotate(350deg) brightness(104%) contrast(102%);
+		}
+	}
+}
+
+#I {
+	transition: transform 1s ease;
+}
+
+#R {
+	transform-origin: top left;
+	transition: transform 1.5s cubic-bezier(1, 0.5, 0, 0.95);
+}
+
+.logo:hover #I {
+	transform-origin: inherit center;
+	transform: rotate(25deg);
+}
+
+.logo:hover #R {
+	transform: rotate(-100deg);
+}
