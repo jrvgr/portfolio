@@ -12,9 +12,9 @@ function darkToggle(storage: Storage): void {
 
 onload = function () {
 	{
-		document
-			.querySelector(".darkToggle")
-			?.addEventListener("click", () => darkToggle(localStorage));
+  document
+    .querySelector(".darkToggle")
+    ?.addEventListener("click", () => darkToggle(localStorage));
 	}
 
 	if (localStorage.getItem("dark") === "true") {
