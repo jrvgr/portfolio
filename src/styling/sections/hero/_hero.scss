@@ -46,10 +46,6 @@
 		@media (prefers-reduced-motion: no-preference) {
 			animation: float 4s ease-in-out infinite;
 			@media (min-width: 1200px) {
-				&:hover {
-					animation: float paused;
-					padding-top: 10px;
-				}
 				margin-top: 40vh;
 			}
 		}

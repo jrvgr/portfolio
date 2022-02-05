@@ -81,7 +81,7 @@ body {
 }
 
 //only if poiting device is present
-@media screen and(pointer: fine) {
+@media screen and (pointer: fine) {
 	.nav__item:hover,
 	.nav__item:focus {
 		&::before {
