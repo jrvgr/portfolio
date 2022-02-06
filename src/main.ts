@@ -23,11 +23,7 @@ onload = function () {
 		darkToggle(localStorage);
 	}
 
-
-
-	console.log(bgColor);
-
-	if ( "hello" === "hello" && !localStorage.getItem("dark")) {
+	if (this.window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem("dark")) {
 		darkToggle(localStorage);
 	}
 };
