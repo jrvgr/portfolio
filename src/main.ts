@@ -25,7 +25,14 @@ onload = function () {
 
 	this.window
 		.matchMedia("(prefers-color-scheme: dark)")
-		.addEventListener("change", () => darkToggle(localStorage));
+		.addEventListener("change", function () {
+			if (
+				window.matchMedia("(prefers-color-scheme: dark)").matches.toString() !==
+				localStorage.getItem("dark")
+			) {
+				darkToggle(localStorage);
+			}
+		});
 
 	if (
 		this.window.matchMedia("(prefers-color-scheme: dark)").matches &&
@@ -34,5 +41,3 @@ onload = function () {
 		darkToggle(localStorage);
 	}
 };
-
-
