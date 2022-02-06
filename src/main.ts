@@ -10,7 +10,7 @@ createIcons({ icons });
 const useNewCode = true; // Set to true to enable the new darkmode implementation.
 
 if (useNewCode) {
-  onload = DarkMode.onload; // See lib/darkmode.ts
+  onload = () => DarkMode.onload; // See lib/darkmode.ts
 } else {
 
   // This is your code, this hasn't been modified.
