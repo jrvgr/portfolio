@@ -11,7 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
   <!-- discord embed -->
   <meta content="viriv.xyz" property="og:title" />
-  <meta content="This is my personal portfolio. Here you can find my skills, projects and contact info!" property="og:description" />
+  <meta content="This is my personal portfolio. Here you can find my skills, projects and contact info!"
+    property="og:description" />
   <meta content="https://alpha.viriv.xyz" property="og:url" />
   <meta content="https://raw.githubusercontent.com/im-viriv/im-viriv.github.io/v4/favicon.svg" property="og:image" />
   <meta content="#434242" data-react-helmet="true" name="theme-color" />
@@ -76,6 +77,11 @@
     </nav>
   </header>
   <main>
+    <noscript class="section">
+      <h1>Hello warrior, This site doesn't display properly without scripting enabled. If you don't trust it you can
+        find the source code <a href="https://github.com/im-viriv/im-viriv.github.io">here</a>, If you are viewing this
+        in a terminal browser, Hello friend and go ahead!</h1>
+    </noscript>
     <div class="section" id="hero">
       <div class="content">
         <h1>Hello,</h1>
@@ -84,9 +90,17 @@
       </div>
       <a class="Arrow" href="#about"><i icon-name="chevron-down"></i></a>
       <div class="shapes">
-        <object type="image/svg+xml" data="square.svg"> </object>
-        <object type="image/svg+xml" data="star.svg"> </object>
-        <object type="image/svg+xml" data="circle.svg"> </object>
+        <svg class="sqaure" xmlns="http://www.w3.org/2000/svg" width="487" height="487" fill="none">
+          <rect width="486" height="486" x=".1" y=".1" fill="#64E3B5" rx="25" />
+        </svg>
+        <svg class="circle" xmlns="http://www.w3.org/2000/svg" width="464" height="464" fill="none">
+          <circle cx="232" cy="232" r="232" fill="#58CDFF" />
+        </svg>
+        <svg class="star" xmlns="http://www.w3.org/2000/svg" width="668" height="668" fill="none">
+          <path fill="#FF5C5C" fill-rule="evenodd"
+            d="M7.8 322a25 25 0 0 0 .6 35.4L91 437V552a25 25 0 0 0 25 25h119.8l86.2 83.2a25 25 0 0 0 35.4-.6L437 577H552a25 25 0 0 0 25-25V432.2l83.2-86.2a25 25 0 0 0-.6-35.4L577 230.8V116a25 25 0 0 0-25-25H432.2L346 7.8a25 25 0 0 0-35.4.6L230.8 91H116a25 25 0 0 0-25 25v119.8L7.8 322Z"
+            clip-rule="evenodd" />
+        </svg>
       </div>
     </div>
   </main>

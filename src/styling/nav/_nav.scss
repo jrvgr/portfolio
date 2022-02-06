@@ -100,4 +100,14 @@ body {
 			animation: out 0.2s linear 0s normal both;
 		}
 	}
+
+		//making this a seperate section is required for this to work for some reason
+	.nav__item-active {
+		&::before {
+			animation: out 0.2s linear 0s normal both;
+		}
+		.nav__icon {
+			animation: in 0.2s linear 0s normal both;
+		}
+	}
 }

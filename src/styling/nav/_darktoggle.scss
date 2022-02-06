@@ -25,7 +25,7 @@ body .darkToggle {
 		}
 	}
 	&:active {
-		transition: transform 0.1s ease;
+		transition: all 0.1s ease;
 		transform: scale(95%);
 	}
 }

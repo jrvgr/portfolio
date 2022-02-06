@@ -64,7 +64,7 @@
 		}
 	}
 
-	@media (pointer: fine) {
+	@media screen and (pointer: fine) {
 		.nav__item svg {
 			display: block;
 			color: var(--nav-items);

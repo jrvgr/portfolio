@@ -1,16 +1,16 @@
 @use "hero/hero";
 
-main{
-  width: 100%;
+main {
+	width: 100%;
 	height: 100%;
 	overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	scroll-behavior: smooth;
 }
 
 //make sure items don't shrink to fit main and transition properly
-.section{
-  flex-shrink: 0;
-  transition: background 0.7s ease;
+.section {
+	flex-shrink: 0;
+	transition: background 0.7s ease;
 }
-
