@@ -8,6 +8,9 @@ main {
 	display: flex;
 	flex-direction: column;
 	scroll-behavior: smooth;
+	@media (min-width: 1200px){
+		height: initial;
+	}
 }
 
 //make sure items don't shrink to fit main and transition properly
