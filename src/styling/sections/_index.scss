@@ -3,7 +3,7 @@
 main {
 	width: 100%;
 	height: 100%;
-	height: -webkit-fill-available;
+	height: initial;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	display: flex;
@@ -13,6 +13,11 @@ main {
 
 //make sure items don't shrink to fit main and transition properly
 .section {
+	padding: 3rem 4vw;
 	flex-shrink: 0;
 	transition: background 0.7s ease;
+	min-height: 100%;
+	&:first-child{
+		padding-top: 0;
+	}
 }

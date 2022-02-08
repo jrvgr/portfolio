@@ -1,16 +1,17 @@
 .shapes {
 	position: absolute;
-	width: 100%;
+	width: max-content;
+	height: max-content;
 
 	.square,
 	.square * {
 		transition: transform 2s ease;
 		transform: rotate(5deg);
 		position: absolute;
-		width: clamp(215px, 40vw, 300px);
-		height: clamp(215px, 40vw, 300px);
-    right:50vw;
-    left: clamp(226.5px, 35vw, 10000vw);
+		width: clamp(50px, calc(20vh + 10vw), 300px);
+		height: clamp(50px, calc(20vh + 10vw), 300px);
+		right: 50vw;
+		left: clamp(calc(226.5px + 0.6vw), 35vw, 10000vw);
 		top: calc(5vh + 3vw);
 		transform-origin: center;
 		overflow: visible;
@@ -31,13 +32,13 @@
 
 	.circle,
 	.circle * {
-    z-index: 0;
+		z-index: 0;
 		transition: transform 1s ease;
 		position: absolute;
-		width: clamp(260px, 40vw, 320px);
-		height: clamp(260px, 40vw, 320px);
-    left: clamp(50px, 13vw, 10000vw);
-		top: calc(calc(26vh + 3vw) + 15vw);
+		width: clamp(30px, calc(20vh + 10vw), 300px);
+		height: clamp(30px, calc(20vh + 10vw), 300px);
+		left: clamp(60px, 13vw, 10000vw);
+		top: calc(calc(25vh + 3vw) + 15vw);
 		overflow: visible;
 	}
 
@@ -57,15 +58,15 @@
 	.star,
 	.star * {
 		transition: transform 1s ease;
-		width: clamp(260px, 40vw, 320px);
-		height: clamp(260px, 40vw, 320px);
+		width: clamp(100px, calc(20vh + 10vw), 320px);
+		height: clamp(100px, calc(20vh + 10vw), 320px);
 		position: absolute;
-    left: clamp(-80px, 60vw, 10000vw);
-    right: 0;
-		top: calc(calc(45vh - 6vw) + 6vw);
+		left: clamp(-80px, 60vw, 10000vw);
+		right: 0;
+		top: calc(calc(50vh - 6vw) + 6vw);
 		overflow: visible;
 		transform-origin: center;
-    transform: rotate(-26deg);
+		transform: rotate(-26deg);
 	}
 
 	.star {

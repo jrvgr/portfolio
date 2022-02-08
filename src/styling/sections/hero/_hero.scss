@@ -5,8 +5,8 @@
 	display: flex;
 	position: relative;
 	flex-direction: row;
-	padding: 0 4vw;
-	height: 100%;
+	min-height: 100%;
+	height: max-content;
 	min-width: 100%;
 	background: var(--hero-background);
 	.content {
@@ -15,8 +15,6 @@
 		z-index: 999;
 		overflow: hidden;
 		min-width: max-content;
-		height: max-content;
-
 		h1 {
 			font-size: 3.5rem;
 			margin-top: 0.3rem;
@@ -46,6 +44,7 @@
 
 	.Arrow svg {
 		margin-top: 20vh;
+		padding-bottom: 20vh;
 		color: var(--hero-font);
 		transition: all 1s ease;
 		width: 2.5rem;

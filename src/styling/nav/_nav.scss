@@ -14,7 +14,7 @@ body {
 	z-index: 2;
 	margin: 0;
 	height: max-content;
-	width: 100%;
+	width: inherit;
 	display: flex;
 	flex-direction: row;
 	background: var(--nav-background);
@@ -24,14 +24,14 @@ body {
 	@media (min-width: 1200px) {
 		width: 4rem;
 		flex-direction: column;
-		height: 100%;
+		height: initial;
 	}
 	nav {
 		display: flex;
 		flex-direction: column;
 		margin: 1vh 0;
-		height: inherit;
-		width: inherit;
+		height: 100%;
+		width: 100%;
 		align-items: inherit;
 		@media (min-width: 1200px) {
 			justify-content: space-between;
@@ -75,9 +75,6 @@ body {
 
 	.nav__icon {
 		color: var(--nav-items);
-		@media screen and (pointer: fine) {
-			transform: scale(0);
-		}
 	}
 }
 

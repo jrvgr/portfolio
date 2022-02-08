@@ -16,4 +16,18 @@ body {
 	padding: 0;
 	overflow: hidden;
 	font-family: "Roboto", sans-serif;
+	scrollbar-width: thin; /* "auto" or "thin" */
+	scrollbar-color: var(--nav-background) var(--hero-background);
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--nav-background);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--hero-background);
 }

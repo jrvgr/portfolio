@@ -3,7 +3,7 @@
 .logo {
 	display: initial;
 	width: 3rem;
-	height: max-content;
+	height: 3rem;
 	overflow: hidden;
 	@media (prefers-reduced-motion: no-preference) {
 		animation: jump 1s ease 1s;
@@ -12,6 +12,7 @@
 
 .logo svg {
 	width: 5rem;
+	height: min-content;
 	height: inherit;
 	transition: transform 1s ease;
 	overflow: hidden;
@@ -24,24 +25,19 @@ body {
 	}
 	.logo {
 		#background {
-			filter: brightness(0) saturate(100%) invert(98%) sepia(6%) saturate(366%)
-				hue-rotate(235deg) brightness(112%) contrast(77%);
+			fill: transparent;
 		}
 		#V {
-			filter: brightness(0) saturate(100%) invert(22%) sepia(14%) saturate(16%)
-				hue-rotate(344deg) brightness(95%) contrast(83%);
+			fill: #444444;
 		}
 		#I * {
-			filter: brightness(0) saturate(100%) invert(98%) sepia(6%) saturate(366%)
-				hue-rotate(235deg) brightness(112%) contrast(77%);
+			fill: #e2e2e2;
 		}
 		#R * {
-			filter: brightness(0) saturate(100%) invert(98%) sepia(6%) saturate(366%)
-				hue-rotate(235deg) brightness(112%) contrast(77%);
+			fill: #e2e2e2;
 		}
 		#Ellipse-6 {
-			filter: brightness(0) saturate(100%) invert(22%) sepia(14%) saturate(16%)
-				hue-rotate(344deg) brightness(95%) contrast(83%);
+			fill: #444444;
 		}
 	}
 }
@@ -49,24 +45,19 @@ body {
 body.dark {
 	.logo {
 		#background {
-			filter: brightness(0) saturate(100%) invert(22%) sepia(14%) saturate(16%)
-				hue-rotate(344deg) brightness(95%) contrast(83%);
+			fill: transparent;
 		}
 		#V {
-			filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
-				hue-rotate(350deg) brightness(104%) contrast(102%);
+			fill: #e2e2e2 !important;
 		}
 		#I * {
-			filter: brightness(0) saturate(100%) invert(22%) sepia(14%) saturate(16%)
-				hue-rotate(344deg) brightness(95%) contrast(83%);
+			fill: #434242 !important;
 		}
 		#R * {
-			filter: brightness(0) saturate(100%) invert(22%) sepia(14%) saturate(16%)
-				hue-rotate(344deg) brightness(95%) contrast(83%);
+			fill: #434242 !important;
 		}
 		#Ellipse-6 {
-			filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
-				hue-rotate(350deg) brightness(104%) contrast(102%);
+			fill: #e2e2e2 !important;
 		}
 	}
 }
