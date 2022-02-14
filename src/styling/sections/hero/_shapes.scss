@@ -40,6 +40,10 @@
 		left: clamp(60px, 13vw, 10000vw);
 		top: calc(calc(25vh + 3vw) + 15vw);
 		overflow: visible;
+		@media screen and (min-width: 1200px) {
+			left: clamp(calc(4vw + 140px), 13vw, 10000vw);
+			top: calc(calc(25vh + 1vw) + 15vw);
+		}
 	}
 
 	.circle {
