@@ -42,6 +42,3 @@ onload = function () {
 		darkToggle(localStorage);
 	}
 };
-
-async function (params:type) {
-	
