@@ -62,6 +62,7 @@
 		height: clamp(100px, calc(20vh + 10vw), 320px);
 		position: absolute;
 		left: clamp(-80px, 60vw, 10000vw);
+		top: calc(calc(50vh - 6vw) + 6vw);
 		right: 0;
 		overflow: visible;
 		transform-origin: center;
