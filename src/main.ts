@@ -1,7 +1,6 @@
 //boilerplating
 import "./styling/style.scss";
 
-import { ApolloClient, gql, useQuery } from "@apollo/client/core";
 import { createIcons, icons } from "lucide";
 
 createIcons({ icons });
