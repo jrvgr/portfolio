@@ -1,3 +1,19 @@
+.darkToggle__wrap {
+	background-color: var(--nav-background);
+	height: max-content;
+	position: absolute;
+	width: var(--nav-size);
+	height: var(--nav-size);
+	top: -45px;
+	right: 5px;
+	border-radius: 0.3rem;
+	transition: background 1s ease;
+	@media (min-width: 1200px) {
+		position: initial;
+		cursor: pointer;
+	}
+}
+
 body.dark .darkToggle {
 	background-image: url(/sun.svg);
 	filter: brightness(0) saturate(100%) invert(99%) sepia(24%) saturate(3046%)
@@ -32,8 +48,6 @@ body .darkToggle {
 
 body .darkToggle {
 	position: absolute;
-	top: -45px;
-	right: 5px;
 	width: var(--nav-size);
 	height: var(--nav-size);
 	background-repeat: no-repeat;

@@ -32,7 +32,7 @@
 
 	.circle,
 	.circle * {
-		z-index: 0;
+		z-index: 2;
 		transition: transform 1s ease;
 		position: absolute;
 		width: clamp(30px, calc(20vh + 10vw), 300px);
@@ -63,7 +63,6 @@
 		position: absolute;
 		left: clamp(-80px, 60vw, 10000vw);
 		right: 0;
-		top: calc(calc(50vh - 6vw) + 6vw);
 		overflow: visible;
 		transform-origin: center;
 		transform: rotate(-26deg);

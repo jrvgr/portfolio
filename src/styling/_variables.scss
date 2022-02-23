@@ -1,14 +1,18 @@
 body {
-  --nav-background: #e2e2e2;
-  --nav-items: #131313;
-  --hero-background: #f1f1f1;
-  --hero-font: #131313;
-  --nav-size: 2.5rem;
+	--nav-background: #e2e2e2;
+	--nav-items: #131313;
+	--hero-background: #eeeeee;
+	--about-background: #dcdcdc;
+	--cards-about-background: #c2c2c2;
+	--hero-font: #131313;
+	--nav-size: 2.5rem;
 }
 
 body.dark {
-  --nav-items: #e2e2e2;
-  --nav-background: #434242;
-  --hero-font: #f1f1f1;
-  --hero-background: #242424;
+	--nav-items: #e2e2e2;
+	--nav-background: #434242;
+	--hero-font: #f1f1f1;
+	--hero-background: #1f1f1f;
+	--about-background: #3c3c3c;
+	--cards-about-background: #555555;
 }

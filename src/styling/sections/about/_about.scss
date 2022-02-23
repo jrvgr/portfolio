@@ -1,0 +1,54 @@
+body .fade__1 {
+	position: relative;
+	background: linear-gradient(to bottom, #eeeeee, 20%, #dcdcdc);
+}
+
+body .fade__1::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(to bottom, #242424, 20%, #3c3c3c);
+	z-index: 1;
+	transition: opacity 0.7s ease;
+	opacity: 0;
+}
+
+body.dark .fade__1::after {
+	opacity: 1;
+}
+
+#about {
+	display: flex;
+	flex-direction: column;
+	background: var(--about-background);
+	height: fit-content;
+	justify-content: space-around;
+	p {
+		color: var(--hero-font);
+		font-size: 1.5rem;
+		font-family: roboto;
+		line-height: 1.6;
+		@media screen and (min-width: 700px) {
+			max-width: 55vh;
+		}
+	}
+	@media screen and (min-width: 700px) {
+		flex-direction: row-reverse;
+	}
+}
+
+#about .cards{
+	.pfp{
+		width: 90%;
+		padding:5%;
+		border-radius: 0.5rem;
+		background: var(--cards-about-background);
+		max-width: 400px;
+		@media screen and (min-width:900px){
+			width: max-content
+		}
+	}
+}

@@ -11,7 +11,7 @@ body {
 }
 
 .main__nav {
-	z-index: 2;
+	z-index: 3;
 	margin: 0;
 	height: max-content;
 	width: inherit;
@@ -99,7 +99,7 @@ body {
 		}
 	}
 
-		//making this a seperate section is required for this to work for some reason
+	//making this a seperate section is required for this to work for some reason
 	.nav__item-active {
 		&::before {
 			animation: out 0.2s linear 0s normal both;

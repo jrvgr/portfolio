@@ -1,4 +1,5 @@
 @use "hero/hero";
+@use "about/about";
 
 main {
 	width: 100%;
@@ -8,7 +9,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	scroll-behavior: smooth;
-	@media (min-width: 1200px){
+	@media (min-width: 1200px) {
 		height: initial;
 	}
 }
@@ -18,8 +19,15 @@ main {
 	padding: 3rem 4vw;
 	flex-shrink: 0;
 	transition: background 0.7s ease;
-	min-height: 100%;
-	&:first-child{
-		padding-top: 0;
+	@media (min-width: 1200px) {
+		&:first-of-type {
+			padding-top: 0;
+		}
 	}
+}
+
+.fade {
+	flex-shrink: 0;
+	height: 4vh;
+	transition: background 0.7s ease;
 }

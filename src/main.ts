@@ -1,6 +1,7 @@
 //boilerplating
 import "./styling/style.scss";
 
+import { ApolloClient, gql, useQuery } from "@apollo/client/core";
 import { createIcons, icons } from "lucide";
 
 createIcons({ icons });
@@ -41,3 +42,19 @@ onload = function () {
 		darkToggle(localStorage);
 	}
 };
+
+async function (params:type) {
+	
+} fetch("https://api.premid.app/v3", {
+	method: "POST",
+	headers: {
+		"Content-Type": "application/json",
+	},
+	body: '{"query":"  subscription {\\n\\t\\tcredits(id:\\"302080358130909185\\"){\\n\\t\\t\\t\\tuser{\\n\\t\\t\\t\\t\\tname\\n\\t\\t\\t\\t\\tstatus\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n    }\\n  "}',
+})
+	.then((response) => {
+		console.log(response);
+	})
+	.catch((err) => {
+		console.error(err);
+	});}
