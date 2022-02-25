@@ -11,8 +11,8 @@
     "vite": "^2.7.2"
   },
   "dependencies": {
-    "@apollo/client": "^3.5.9",
     "graphql": "^16.3.0",
+    "graphql-request": "^4.0.0",
     "lucide": "^0.16.29",
     "sass": "^1.49.7"
   }

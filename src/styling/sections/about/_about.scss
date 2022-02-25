@@ -26,6 +26,7 @@ body.dark .fade__1::after {
 	background: var(--about-background);
 	height: fit-content;
 	justify-content: space-around;
+	gap: 1em;
 	p {
 		color: var(--hero-font);
 		font-size: 1.5rem;
@@ -34,21 +35,100 @@ body.dark .fade__1::after {
 		@media screen and (min-width: 700px) {
 			max-width: 55vh;
 		}
+		flex-shrink: 1;
 	}
 	@media screen and (min-width: 700px) {
 		flex-direction: row-reverse;
 	}
 }
 
-#about .cards{
-	.pfp{
+#about .cards {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
+	.pfp {
 		width: 90%;
-		padding:5%;
+		padding: 5%;
 		border-radius: 0.5rem;
 		background: var(--cards-about-background);
 		max-width: 400px;
-		@media screen and (min-width:900px){
-			width: max-content
+		@media screen and (min-width: 900px) {
+			width: max-content;
 		}
+	}
+	.socials {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		width: 100%;
+		gap: 10px;
+		a,
+		button {
+			border: none;
+			background: var(--cards-about-background);
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			padding: 0.4rem 0;
+			border-radius: 0.25em;
+			color: var(--hero-font);
+			cursor: pointer;
+			svg {
+				height: 2rem;
+			}
+		}
+	}
+
+	.dc__card.visible {
+		transform: scale(1);
+	}
+	.dc__card {
+		transform-origin: top;
+		transform: scale(0);
+		transition: all 1s ease;
+		width: max-content;
+		align-items: center;
+		flex-direction: column;
+		display: flex;
+		background: var(--cards-about-background);
+		padding: 8px 2rem;
+		border-radius: 0.5em;
+		.Ediv {
+			display: flex;
+			justify-content: center;
+			color: var(--hero-font);
+			font-family: roboto, sans-serif;
+		}
+		.Cdiv {
+			position: relative;
+			width: max-content;
+			.avatar {
+				border-radius: 50%;
+			}
+			.status {
+				position: absolute;
+				width: 22px;
+				height: 22px;
+				bottom: 13px;
+				right: 13px;
+				border-radius: 100%;
+			}
+			.online {
+				background: #3ba55d;
+			}
+			.dnd {
+				background: #ed4245;
+			}
+			.idle {
+				background: #faa81a;
+			}
+			.offline {
+				background: #888888;
+			}
+		}
+	}
+	@media screen and (min-width: 700px) {
+		flex-direction: column;
 	}
 }
