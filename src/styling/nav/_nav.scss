@@ -59,7 +59,9 @@ body {
 		align-items: center;
 		width: 100%;
 		padding: inherit;
-		outline: 1px var(--nav-items);
+		&:focus{
+			outline: auto;
+		}
 	}
 	.logo,
 	.nav__text {
@@ -80,8 +82,7 @@ body {
 
 //only if poiting device is present
 @media screen and (pointer: fine) {
-	.nav__item:hover,
-	.nav__item:focus {
+	.main__nav:hover .nav__item, .main__nav:focus-within .nav__item {
 		&::before {
 			animation: out 0.2s linear 0s normal both;
 		}

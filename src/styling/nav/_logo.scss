@@ -28,36 +28,16 @@ body {
 			fill: transparent;
 		}
 		#V {
-			fill: #444444;
+			fill: var(--nav-items);
 		}
 		#I * {
-			fill: #e2e2e2;
+			fill: var(--nav-background);
 		}
 		#R * {
-			fill: #e2e2e2;
+			fill: var(--nav-background);
 		}
 		#Ellipse-6 {
-			fill: #444444;
-		}
-	}
-}
-
-body.dark {
-	.logo {
-		#background {
-			fill: transparent;
-		}
-		#V {
-			fill: #e2e2e2 !important;
-		}
-		#I * {
-			fill: #434242 !important;
-		}
-		#R * {
-			fill: #434242 !important;
-		}
-		#Ellipse-6 {
-			fill: #e2e2e2 !important;
+			fill: var(--nav-items);
 		}
 	}
 }
