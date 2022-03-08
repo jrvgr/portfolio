@@ -1,3 +1,4 @@
+//gradient between hero and about
 body .fade__1 {
 	position: relative;
 	background: linear-gradient(to bottom, #fafafa, 20%, #e6e6e6);
@@ -20,6 +21,7 @@ body.dark .fade__1::after {
 	opacity: 1;
 }
 
+//styling for about
 #about {
 	display: flex;
 	flex-direction: column;
