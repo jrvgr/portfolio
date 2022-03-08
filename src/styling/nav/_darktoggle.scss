@@ -16,16 +16,16 @@
 
 body.dark .darkToggle {
 	background-image: url(/sun.svg);
-	filter: brightness(0) saturate(100%) invert(99%) sepia(24%) saturate(3046%)
-		hue-rotate(325deg) brightness(109%) contrast(102%);
+	filter: invert(88%) sepia(7%) saturate(4132%) hue-rotate(358deg)
+		brightness(106%) contrast(105%);
 	transition: transform 0.5s ease;
 	transform: scale(90%);
 }
 
 body .darkToggle {
 	background-image: url(/moon.svg);
-	filter: brightness(0) saturate(100%) invert(13%) sepia(82%) saturate(1978%)
-		hue-rotate(212deg) brightness(97%) contrast(93%);
+	filter: invert(11%) sepia(61%) saturate(3071%) hue-rotate(229deg)
+		brightness(109%) contrast(106%);
 	transition: transform 0.5s ease;
 	transform: scale(90%);
 }

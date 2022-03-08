@@ -26,6 +26,7 @@ body {
 		flex-direction: column;
 		height: initial;
 	}
+
 	nav {
 		display: flex;
 		flex-direction: column;
@@ -38,6 +39,7 @@ body {
 			align-items: center;
 		}
 	}
+
 	.nav__list {
 		display: flex;
 		flex-direction: row;
@@ -53,16 +55,18 @@ body {
 			width: 100%;
 		}
 	}
+
 	.nav__item {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 100%;
 		padding: inherit;
-		&:focus{
+		&:focus {
 			outline: auto;
 		}
 	}
+
 	.logo,
 	.nav__text {
 		display: none;
@@ -82,7 +86,8 @@ body {
 
 //only if poiting device is present
 @media screen and (pointer: fine) {
-	.main__nav:hover .nav__item, .main__nav:focus-within .nav__item {
+	.main__nav:hover .nav__item,
+	.main__nav:focus-within .nav__item {
 		&::before {
 			animation: out 0.2s linear 0s normal both;
 		}

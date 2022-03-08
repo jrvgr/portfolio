@@ -1,6 +1,6 @@
 body .fade__1 {
 	position: relative;
-	background: linear-gradient(to bottom, #eeeeee, 20%, #dcdcdc);
+	background: linear-gradient(to bottom, #fafafa, 20%, #e6e6e6);
 }
 
 body .fade__1::after {
@@ -10,7 +10,7 @@ body .fade__1::after {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: linear-gradient(to bottom, #242424, 20%, #3c3c3c);
+	background: linear-gradient(to bottom, #373737, 20%, #555);
 	z-index: 1;
 	transition: opacity 0.7s ease;
 	opacity: 0;
