@@ -23,7 +23,7 @@
 
 	@keyframes in {
 		from {
-			transform: scale(0%);
+			transform: scale(0);
 			position: absolute;
 			z-index: -1;
 		}
@@ -33,13 +33,12 @@
 		}
 
 		75% {
-			z-index: 100;
+			z-index: 1;
 		}
 
 		to {
-			position: block;
-			z-index: 100;
-			transform: scale(100%);
+			z-index: 1;
+			transform: scale(1);
 		}
 	}
 
@@ -55,12 +54,12 @@
 		}
 
 		25% {
-			z-index: 100;
+			z-index: 1;
 		}
 
 		from {
-			z-index: 100;
-			transform: scale(100%);
+			z-index: 1;
+			transform: scale(1);
 		}
 	}
 
@@ -78,6 +77,11 @@
 			display: block;
 			margin: 0.35rem;
 			border-radius: 100%;
+			top: 25%;
+			@media screen and (min-width: 1200px) {
+				right: 30%;
+				top: 0;
+			}
 		}
 	}
 }
