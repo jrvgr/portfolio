@@ -8,8 +8,8 @@
 		transition: transform 2s ease;
 		transform: rotate(5deg);
 		position: absolute;
-		width: clamp(50px, calc(20vh + 10vw), 300px);
-		height: clamp(50px, calc(20vh + 10vw), 300px);
+		width: clamp(50px, calc(20vh + 10vw), 500px);
+		height: clamp(50px, calc(20vh + 10vw), 500px);
 		right: 50vw;
 		left: clamp(calc(226.5px + 0.6vw), 35vw, 10000vw);
 		top: calc(5vh + 3vw);
@@ -31,8 +31,8 @@
 		z-index: 2;
 		transition: transform 1s ease;
 		position: absolute;
-		width: clamp(30px, calc(20vh + 10vw), 300px);
-		height: clamp(30px, calc(20vh + 10vw), 300px);
+		width: clamp(30px, calc(20vh + 10vw), 500px);
+		height: clamp(30px, calc(20vh + 10vw), 500px);
 		left: clamp(60px, 13vw, 10000vw);
 		top: calc(calc(25vh + 3vw) + 15vw);
 		overflow: visible;
@@ -51,8 +51,8 @@
 	.star,
 	.star * {
 		transition: transform 1s ease;
-		width: clamp(100px, calc(20vh + 10vw), 320px);
-		height: clamp(100px, calc(20vh + 10vw), 320px);
+		width: clamp(100px, calc(20vh + 10vw), 520px);
+		height: clamp(100px, calc(20vh + 10vw), 520px);
 		position: absolute;
 		left: clamp(-80px, 60vw, 10000vw);
 		top: calc(calc(50vh - 6vw) + 6vw);
