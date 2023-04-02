@@ -38,7 +38,7 @@
       {:then projects}
         <div in:slide class="projectItems">
           {#each projects as project, i}
-            {@const delay = 200 * i + 4}
+            {@const delay = 100 * i + 4}
             <a
               in:fly={{ delay, y: 50 }}
               href={project.svn_url}
@@ -52,7 +52,13 @@
                   {project.name}
                 </div>
                 <div class="details">
-                  <span>{project.stargazers_count}<StarIcon /></span>
+                  <span
+                    class="language"
+                    style="mask-image: url(https://api.iconify.design/simple-icons/{project.language.toLowerCase()}.svg); -webkit-mask-image: url(https://api.iconify.design/simple-icons/{project.language.toLowerCase()}.svg);"
+                  />
+                  <span class="stars"
+                    >{project.stargazers_count}<StarIcon /></span
+                  >
                 </div>
               </div>
             </a>
@@ -131,18 +137,18 @@
   }
 
   .project:hover,
-  .project:focus-within {
+  .project:focus-visible {
     @media (any-pointer: fine) {
       background-color: var(--projects-tertiary);
     }
   }
 
   .project:hover .content,
-  .project:focus-within .content {
+  .project:focus-visible .content {
     @media (any-pointer: fine) {
-      padding-bottom: clamp(45px, 7vw, 75px);
+      padding-bottom: clamp(45px, 10vw, 75px);
       padding-top: 15px;
-      padding-left: 20px;
+      padding-left: 30px;
     }
   }
 
@@ -160,7 +166,7 @@
     overflow: hidden;
     padding: 10px 20px 5px;
     font-family: "inter", sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     transition: all 0.2s ease;
 
     @media (any-pointer: fine) {
@@ -173,8 +179,31 @@
     -moz-transition: font-size 0.2s ease;
   }
 
-  .project .details span {
+  .project .details {
     display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color: var(--projects-primary);
+    text-decoration: none;
+    align-items: center;
+  }
+  
+
+  .project .details .language {
+    height: clamp(20px, 6vw, 1em);
+    width: clamp(20px, 6vw, 1em);
+    background-color: var(--projects-primary);
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    
+  }
+
+  .project .details span {
+    display: inline-flex;
     flex-direction: row;
     gap: 10px;
     color: var(--projects-primary);
@@ -183,6 +212,8 @@
       opacity: 0.2;
     }
   }
+
+
 
   .project:hover .details span {
     @media (any-pointer: fine) {

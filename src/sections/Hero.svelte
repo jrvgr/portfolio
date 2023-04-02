@@ -26,8 +26,6 @@
 <section id="hero" on:pointermove={handleBlobMovement} class="hero">
   <span class="blob" />
   <span class="blob-blur" />
-  <a href="#projects" class="callToAction"><ArrowDown /></a>
-
   <div class="text">
     <Marquee speed={20} direction="right">
       <h1 class="name">{name}</h1>
@@ -183,35 +181,5 @@
     justify-content: flex-end;
     font-family: "agrandir-grand", sans-serif;
     overflow: hidden;
-  }
-
-  .callToAction {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 5;
-    color: var(--hero-white);
-    font-size: 2rem;
-    width: 100%;
-    height: 40%;
-  }
-
-  :global(.callToAction .icon) {
-    position: absolute;
-    color: var(--hero-secondary);
-    width: 20vw;
-    height: 20vw;
-    max-width: 150px;
-    max-height: 150px;
-    transition: transform 0.25s ease-in-out;
-    top: -50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(200px) scale(0);
-    pointer-events: none;
-  }
-
-  :global(.callToAction:hover .icon) {
-    transform: translateY(0) translateX(-50%) scale(1);
   }
 </style>

@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [
     spaLoading("img", {
       tipText: "Hold your horses, I'm here in a second!",
-      src: "src/assets/loading.svg",
+      src: "/loading.svg",
       css: "user-select: none, z-index: -1; pointer-events: none;",
       debounce: 150,
     }),
