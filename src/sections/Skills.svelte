@@ -202,7 +202,7 @@
       text-decoration: underline;
       text-decoration-style: wavy;
       text-decoration-color: #af3838;
-      animation: wavy-slide 20s linear infinite;
+      animation: wavy-slide 10s linear infinite;
     }
     &:hover {
       color: var(--projects-primary-hover);
