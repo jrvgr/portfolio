@@ -1,117 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Viriv!</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
-  <!-- discord embed -->
-  <meta content="viriv.xyz" property="og:title" />
-  <meta content="This is my personal portfolio. Here you can find my skills, projects and contact info!"
-    property="og:description" />
-  <meta content="https://alpha.viriv.xyz" property="og:url" />
-  <meta content="https://raw.githubusercontent.com/im-viriv/im-viriv.github.io/v4/favicon.svg" property="og:image" />
-  <meta content="#434242" data-react-helmet="true" name="theme-color" />
-  <script src="https://kit.fontawesome.com/b54dd4e474.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  <noscript class="section">
-    <h1>Hello warrior, This site doesn't display properly without scripting enabled. If you don't trust it you can
-      find the source code <a href="https://github.com/im-viriv/im-viriv.github.io">here</a>, If you are viewing this
-      in a terminal browser, Hello friend and go ahead!</h1>
-  </noscript>
-  <script type="module" src="/src/main.ts"></script>
-  <header class="main__nav">
-    <nav>
-      <svg class="logo" width="761" height="761" viewBox="0 0 761 761" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g id="frame">
-          <rect id="background" width="760.06" height="760.06" fill="transparent" />
-          <g id="V">
-            <rect id="Rectangle 6" width="256.017" height="670.272"
-              transform="matrix(0.906308 -0.422618 0.232764 0.972533 63 108.197)" />
-            <rect id=" Rectangle 7" width="255.908" height="670.258"
-              transform="matrix(0.906308 0.422618 -0.232764 0.972533 464.095 0.0595703)" />
-            <rect id="Rectangle 8" x="219.015" y="532.06" width="321" height="228" />
-          </g>
-          <g id="R">
-            <circle id="Ellipse 5" cx="464.517" cy="85.5596" r="85.5" fill="white" />
-            <rect id="Rectangle 10" x="428.017" y="135.974" width="57.0928" height="133.558"
-              transform="rotate(-10 428.017 135.974)" fill="white" />
-            <ellipse id="Ellipse-6" cx="465.017" cy="85.5596" rx="42" ry="40.5" fill="#444444" />
-          </g>
-          <g id="I">
-            <rect id="Rectangle 11" x="68.0151" y="431.06" width="151" height="329" fill="white" />
-            <circle id="Ellipse 8" cx="143.515" cy="325.56" r="75.5" fill="white" />
-          </g>
-        </g>
-      </svg>
-      <div class="nav__list">
-
-        <a id="nav__item-Hero" class="nav__item" href="#hero" title="Hero">
-          <i class="nav__icon" icon-name="Home"></i>
-          <span class="nav__text">Home</span>
-        </a>
-
-        <a id="nav__item-About" class="nav__item" href="#about" title="About">
-          <i class="nav__icon" icon-name="info"></i>
-          <span class="nav__text">About me</span>
-        </a>
-
-      </div>
-      <!-- dark mode toggle -->
-      <div class="darkToggle__wrap"><button class="darkToggle" aria-label="Toggle Dark Mode"></button></div>
-    </nav>
-  </header>
-
-  <main>
-    <div class="section" id="hero">
-      <div class="content">
-        <h1>Hello,</h1>
-        <h1>I'm Viriv!</h1>
-        <p>A webdev and designer</p>
-        <a class="Arrow" href="#about"><i icon-name="chevron-down"></i></a>
-
-      </div>
-      <div class="shapes">
-        <svg class="square" xmlns="http://www.w3.org/2000/svg" width="487" height="487" fill="none">
-          <rect width="486" height="486" x=".1" y=".1" fill="#64E3B5" rx="25" />
-        </svg>
-
-        <svg class="circle" viewBox="0 0 464 464" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="232" cy="232" r="232" fill="#58CDFF" />
-        </svg>
-
-        <svg class="star" width="668" height="668" viewBox="0 0 668 668" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M8.16882 316.467C-1.59429 326.231 -1.59428 342.06 8.16883 351.823L91.1451 434.799V552.145C91.1451 565.952 102.338 577.145 116.145 577.145H233.491L316.467 660.121C326.23 669.884 342.06 669.884 351.823 660.121L434.799 577.145H552.145C565.952 577.145 577.145 565.952 577.145 552.145V434.799L660.121 351.823C669.884 342.06 669.884 326.23 660.121 316.467L577.145 233.491V116.145C577.145 102.338 565.952 91.145 552.145 91.145H434.799L351.823 8.16885C342.06 -1.59425 326.23 -1.59424 316.467 8.16886L233.491 91.145H116.145C102.338 91.145 91.1451 102.338 91.1451 116.145V233.491L8.16882 316.467Z"
-            fill="#FF5C5C" />
-        </svg>
-
-      </div>
-    </div>
-    <div class="fade fade__1"></div>
-    <div class="section" id="about">
-      <div class="cards">
-        <img src="./github_pfp.png" alt="image of me" class="pfp">
-        <div class="socials">
-          <a href="https://github.com/im-viriv" rel="noopener" target="_blank"><i class="fa-brands fa-github"></i></a>
-          <a href="https://twitter.com/viriv" rel="noopener" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-          <a href="https://instagram.com/im_viriv" rel="noopener" target="_blank"><i
-              class="fa-brands fa-instagram"></i></a>
-          <button class="discord"><i class="fa-brands fa-discord"></i></button>
-        </div>
-      </div>
-      <p class="text">Hi, I'm Viriv. A developer from Tilburg - the Netherlands.
-        I write code. But I also do: photography, skateboarding and some visual design. I got into software from a very
-        young age. Flashing a custom rom on my tablet at the age of just 7 years old and running linux mint before I
-        could properly speak english. I still use Linux to this very day and now I also code</p>
-    </div>
-  </main>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="darkreader-lock" />
+    <title>Jacco's portfolio</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>

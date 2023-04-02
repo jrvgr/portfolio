@@ -1,0 +1,31 @@
+:root {
+  --hero-primary: #2c2c2a;
+  --hero-secondary: #d1ebd3;
+  --projects-background: #d8d3bf;
+  --projects-primary: #574545;
+  --projects-secondary: #c0ba9f;
+  --projects-tertiary: #eee9d7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --projects-background: #353020;
+    --projects-primary: #91887c;
+    --projects-secondary: #5a5245;
+    --projects-tertiary: #423c27;
+  }
+}
+
+html {
+  background-color: var(--projects-background);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
