@@ -12,6 +12,7 @@
   "devDependencies": {
     "@iconify-json/line-md": "^1.1.23",
     "@iconify-json/lucide": "^1.1.74",
+    "@iconify-json/simple-icons": "^1.1.47",
     "@sveltejs/vite-plugin-svelte": "^2.0.4",
     "@tsconfig/svelte": "^3.0.0",
     "svelte": "^3.55.1",

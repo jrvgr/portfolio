@@ -2,7 +2,8 @@
   --hero-primary: #2c2c2a;
   --hero-secondary: #d1ebd3;
   --projects-background: #d8d3bf;
-  --projects-primary: #574545;
+  --projects-primary: #6e5858;
+  --projects-primary-hover: #312222;
   --projects-secondary: #c0ba9f;
   --projects-tertiary: #eee9d7;
 }
@@ -11,6 +12,7 @@
   :root {
     --projects-background: #353020;
     --projects-primary: #91887c;
+    --projects-primary-hover: #cfbfa6;
     --projects-secondary: #5a5245;
     --projects-tertiary: #423c27;
   }

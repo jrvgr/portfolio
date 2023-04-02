@@ -1,4 +1,5 @@
 import type { StarredProject } from "./github.d";
+export type { StarredProject } from "./github.d";
 
 export async function getProjects() {
   const response = await fetch("https://api.github.com/users/J-Groen/starred");

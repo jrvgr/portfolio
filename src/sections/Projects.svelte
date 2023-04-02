@@ -1,24 +1,17 @@
 <script lang="ts">
-  import { getProjects } from "../api/github";
+  import ProjectItem from "./../components/ProjectItem.svelte";
+  import { getProjects, type StarredProject } from "../api/github";
   import Spinner from "~icons/line-md/downloading-loop";
-  import StarIcon from "~icons/line-md/heart-filled";
-  import GithubIcon from "~icons/line-md/github-twotone";
   import SadFace from "~icons/line-md/emoji-frown";
-  import { fly, slide } from "svelte/transition";
+  import { slide } from "svelte/transition";
   import IntersectionObserver from "svelte-intersection-observer";
   let element;
   let intersecting;
 
-  let projects: any = Object.freeze([]);
+  let projects: Promise<StarredProject[]> = getProjects();
 </script>
 
-<IntersectionObserver
-  once
-  {element}
-  on:intersect={() => (projects = getProjects())}
-  bind:intersecting
-  threshold={0.8}
->
+<IntersectionObserver once {element} bind:intersecting threshold={0.8}>
   <section
     transition:slide={{
       axis: "y",
@@ -29,52 +22,32 @@
     class="projects"
   >
     <h1 class="projectsHeading">Projects:</h1>
-    {#key projects}
-      {#await projects}
-        <div class="spinner">
-          <p>Hold tight! I'm fetching the projects as fast as I can!</p>
-          <Spinner style="font-size: 3em" />
-        </div>
-      {:then projects}
+    {#await projects}
+      <div class="spinner">
+        <p>Hold tight! I'm fetching the projects as fast as I can!</p>
+        <Spinner style="font-size: 3em" />
+      </div>
+    {:then projects}
+      {#if intersecting}
         <div in:slide class="projectItems">
           {#each projects as project, i}
-            {@const delay = 100 * i + 4}
-            <a
-              in:fly={{ delay, y: 50 }}
-              href={project.svn_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project"
-            >
-              <div class="content">
-                <div class="name">
-                  <GithubIcon />
-                  {project.name}
-                </div>
-                <div class="details">
-                  <span
-                    class="language"
-                    style="mask-image: url(https://api.iconify.design/simple-icons/{project.language.toLowerCase()}.svg); -webkit-mask-image: url(https://api.iconify.design/simple-icons/{project.language.toLowerCase()}.svg);"
-                  />
-                  <span class="stars"
-                    >{project.stargazers_count}<StarIcon /></span
-                  >
-                </div>
-              </div>
-            </a>
+            {@const delay = 150 * (i - 0.3)}
+            {#key project}
+              <ProjectItem {project} {delay} />
+            {/key}
           {/each}
         </div>
-      {:catch error}
-        <div class="error">
-          <p>
-            Couldn't fetch projects. Maybe next time? <SadFace
-              style="font-size: 3em"
-            />
-          </p>
-          <p>{error.message}</p>
-        </div>
-      {/await}
-    {/key}
+      {/if}
+    {:catch error}
+      <div class="error">
+        <p>
+          Couldn't fetch projects. Maybe next time? <SadFace
+            style="font-size: 3em"
+          />
+        </p>
+        <p>{error.message}</p>
+      </div>
+    {/await}
   </section>
 </IntersectionObserver>
 
@@ -134,113 +107,5 @@
     max-width: none;
     display: flex;
     flex-direction: column;
-  }
-
-  .project:hover,
-  .project:focus-visible {
-    @media (any-pointer: fine) {
-      background-color: var(--projects-tertiary);
-    }
-  }
-
-  .project:hover .content,
-  .project:focus-visible .content {
-    @media (any-pointer: fine) {
-      padding-bottom: clamp(45px, 10vw, 75px);
-      padding-top: 15px;
-      padding-left: 30px;
-    }
-  }
-
-  .project .content {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    width: 100%;
-    max-width: 1920px;
-    align-items: baseline;
-    justify-content: space-between;
-    align-items: flex-start;
-    text-decoration: none;
-    border-bottom: 1px solid var(--projects-primary);
-    overflow: hidden;
-    padding: 10px 20px 5px;
-    font-family: "inter", sans-serif;
-    font-weight: 500;
-    transition: all 0.2s ease;
-
-    @media (any-pointer: fine) {
-      height: clamp(32.5px, 7.5vw, 52.5px);
-    }
-  }
-
-  .project .content * {
-    transition: font-size 0.05s linear;
-    -moz-transition: font-size 0.2s ease;
-  }
-
-  .project .details {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    color: var(--projects-primary);
-    text-decoration: none;
-    align-items: center;
-  }
-  
-
-  .project .details .language {
-    height: clamp(20px, 6vw, 1em);
-    width: clamp(20px, 6vw, 1em);
-    background-color: var(--projects-primary);
-    mask-size: contain;
-    -webkit-mask-size: contain;
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
-    mask-position: center;
-    -webkit-mask-position: center;
-    
-  }
-
-  .project .details span {
-    display: inline-flex;
-    flex-direction: row;
-    gap: 10px;
-    color: var(--projects-primary);
-    text-decoration: none;
-    @media (any-pointer: fine) {
-      opacity: 0.2;
-    }
-  }
-
-
-
-  .project:hover .details span {
-    @media (any-pointer: fine) {
-      opacity: 1;
-    }
-  }
-
-  .project .name {
-    font-style: normal;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    color: var(--projects-primary);
-    text-decoration: none;
-  }
-
-  .project {
-    font-size: clamp(20px, 6vw, 2.8em);
-    text-decoration: none;
-    width: 100%;
-    max-width: none;
-    display: flex;
-    justify-content: center;
-  }
-
-  .project:hover {
-    font-size: clamp(20px, 6.5vw, 3.3em);
   }
 </style>
