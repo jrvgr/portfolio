@@ -95,11 +95,10 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 40px 0px;
+    padding: 0px 0px 50px;
     text-transform: capitalize;
     color: var(--projects-primary);
-    z-index: 2;
-    height: 400px;
+    z-index: 2;;
   }
 
   .projectItems {

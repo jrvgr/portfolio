@@ -98,7 +98,7 @@
     -webkit-mask-position: center;
   }
 
-    .project:hover .content .details .language, {
+    .project:hover .content .details .language {
       background-color: var(--projects-primary-hover);
     }
 

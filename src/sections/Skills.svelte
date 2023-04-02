@@ -2,6 +2,9 @@
   import Marquee from "svelte-fast-marquee/";
   import TsIcon from "~icons/simple-icons/typescript";
   import SvelteIcon from "~icons/simple-icons/svelte";
+  import HtmlIcon from "~icons/simple-icons/html5";
+  import CssIcon from "~icons/simple-icons/css3";
+  import JsIcon from "~icons/simple-icons/javascript";
   import AdobeAiIcon from "~icons/simple-icons/adobeillustrator";
   import AdobePsIcon from "~icons/simple-icons/adobephotoshop";
   import FigmaIcon from "~icons/simple-icons/figma";
@@ -12,6 +15,9 @@
   import PhpIcon from "~icons/simple-icons/php";
   import SassIcon from "~icons/simple-icons/sass";
   import MySQlIcon from "~icons/simple-icons/mysql";
+  import CodeIcon from "~icons/lucide/code-2";
+  import ServerIcon from "~icons/lucide/server";
+  import BrushIcon from "~icons/lucide/brush";
 
   import { slide } from "svelte/transition";
 
@@ -26,6 +32,20 @@
       name: "TypeScript",
       icon: TsIcon,
     },
+
+    {
+      name: "JavaScript",
+      icon: JsIcon,
+    },
+    {
+      name: "HTML",
+      icon: HtmlIcon,
+    },
+    {
+      name: "CSS",
+      icon: CssIcon,
+    },
+
     {
       name: "Sass",
       icon: SassIcon,
@@ -84,6 +104,7 @@
         class:active={activeTab === "frontend"}
         on:click={() => (activeTab = "frontend")}
       >
+        <CodeIcon />
         Frontend
       </button>
       <button
@@ -91,6 +112,7 @@
         class:active={activeTab === "backend"}
         on:click={() => (activeTab = "backend")}
       >
+        <ServerIcon />
         Backend
       </button>
       <button
@@ -98,6 +120,7 @@
         class:active={activeTab === "design"}
         on:click={() => (activeTab = "design")}
       >
+        <BrushIcon />
         Design
       </button>
     </aside>
@@ -138,6 +161,9 @@
     font-family: "corben", sans-serif;
     padding: 30px 0;
     gap: 20px;
+    @media (max-width: 768px) {
+      min-height: 450px;
+    }
   }
 
   .skillsHeading {
@@ -156,6 +182,9 @@
   .wrapper {
     display: flex;
     flex-direction: row;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   .tabSelector {
@@ -168,6 +197,12 @@
     align-items: flex-start;
     margin-left: 20px;
     gap: 10px;
+    @media (max-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
+    }
   }
 
   .tabSelector button {
@@ -187,22 +222,24 @@
     &.active {
       color: var(--projects-primary-hover);
     }
-    &.active:after {
-      position: absolute;
-      z-index: 3;
-      top: -0.25em;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      white-space: nowrap;
-      content: attr(data-text) attr(data-text);
-      color: transparent;
-      line-height: 1.8;
-      text-underline-offset: 0.3em;
-      text-decoration: underline;
-      text-decoration-style: wavy;
-      text-decoration-color: #af3838;
-      animation: wavy-slide 10s linear infinite;
+    @media (min-width: 768px) {
+      &.active:after {
+        position: absolute;
+        z-index: 3;
+        top: -0.25em;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        white-space: nowrap;
+        content: attr(data-text) attr(data-text);
+        color: transparent;
+        line-height: 1.8;
+        text-underline-offset: 0.3em;
+        text-decoration: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: #af3838;
+        animation: wavy-slide 10s linear infinite;
+      }
     }
     &:hover {
       color: var(--projects-primary-hover);
@@ -228,6 +265,13 @@
     align-items: flex-start;
     text-align: left;
     font-size: clamp(20px, 4vw, 1.2em);
+    @media (max-width: 768px) {
+      display: flex;
+      margin: 0 auto;
+      max-width: 1000px;
+      width: 100%;
+      padding: 0 40px;
+    }
   }
 
   .skillsList .skill {
@@ -236,9 +280,6 @@
     align-items: center;
     gap: 20px;
     transition: all 0.1s ease-in-out;
-    &:hover {
-      color: var(--projects-primary-hover);
-    }
   }
 
   @-webkit-keyframes move {
