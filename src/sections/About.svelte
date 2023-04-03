@@ -22,25 +22,26 @@
     </p>
     <div bind:this={element} class="socials">
       <a
+        aria-labelledby="linkedintext"
         href="https://www.linkedin.com/in/jacco-groen-09514b253/"
         target="_blank"
       >
         {#if intersecting}
         <LinkedIn />
         {/if}
-        <span>jacco-groen</span>
+        <span id="linkedintext">jacco-groen</span>
       </a>
-      <a href="https://github.com/J-Groen" target="_blank">
+      <a aria-labelledby="githubtext" href="https://github.com/J-Groen" target="_blank">
         {#if intersecting}
         <GitHub />
         {/if}
-        <span>J-Groen</span>
+        <span id="githubtext">J-Groen</span>
       </a>
-      <a href="mailto:jacco.groen@protonmail.com" target="_blank">
+      <a aria-labelledby="mailtext" href="mailto:jacco.groen@protonmail.com" target="_blank">
         {#if intersecting}
         <Mail />
         {/if}
-        <span>jacco.groen@protonmail.com</span>
+        <span id="mailtext">jacco.groen@protonmail.com</span>
       </a>
     </div>
     <p class="fingerprint">
