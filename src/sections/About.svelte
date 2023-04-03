@@ -2,39 +2,52 @@
   import LinkedIn from "~icons/line-md/linkedin";
   import GitHub from "~icons/line-md/github";
   import Mail from "~icons/line-md/email";
+
+  import IntersectionObserver from "svelte-intersection-observer";
+
+  let element;
+  let intersecting;
 </script>
 
-<section class="about">
-  <h1 class="aboutHeading">About me</h1>
-  <p class="aboutText">
-    I'm a 17-year-old creative developer who's been passionate about computers
-    since the age of 7. Two years ago, I started programming and quickly fell in
-    love with it. In my free time, I enjoy skateboarding and listening to music,
-    which helps me find inspiration for my work. I'm always eager to learn and
-    take on new projects, whether it's developing software or creating visually
-    stunning designs.
-  </p>
-  <div class="socials">
-    <a
-      href="https://www.linkedin.com/in/jacco-groen-09514b253/"
-      target="_blank"
-    >
-      <LinkedIn />
-      <span>jacco-groen</span>
-    </a>
-    <a href="https://github.com/J-Groen" target="_blank">
-      <GitHub />
-      <span>J-Groen</span>
-    </a>
-    <a href="mailto:jacco.groen@protonmail.com" target="_blank">
-      <Mail />
-      <span>jacco.groen@protonmail.com</span>
-    </a>
-  </div>
-  <p class="fingerprint">
-    pgp fingerprint: 0960 F91A 3A09 905D D19A 59E1 0A5C A16E EF97 D1F9
-  </p>
-</section>
+<IntersectionObserver {element} bind:intersecting threshold={0}>
+  <section class="about">
+    <h1 class="aboutHeading">About me</h1>
+    <p class="aboutText">
+      I'm a 17-year-old creative developer who's been passionate about computers
+      since the age of 7. Two years ago, I started programming and quickly fell
+      in love with it. In my free time, I enjoy skateboarding and listening to
+      music, which helps me find inspiration for my work. I'm always eager to
+      learn and take on new projects, whether it's developing software or
+      creating visually stunning designs.
+    </p>
+    <div bind:this={element} class="socials">
+      <a
+        href="https://www.linkedin.com/in/jacco-groen-09514b253/"
+        target="_blank"
+      >
+        {#if intersecting}
+        <LinkedIn />
+        {/if}
+        <span>jacco-groen</span>
+      </a>
+      <a href="https://github.com/J-Groen" target="_blank">
+        {#if intersecting}
+        <GitHub />
+        {/if}
+        <span>J-Groen</span>
+      </a>
+      <a href="mailto:jacco.groen@protonmail.com" target="_blank">
+        {#if intersecting}
+        <Mail />
+        {/if}
+        <span>jacco.groen@protonmail.com</span>
+      </a>
+    </div>
+    <p class="fingerprint">
+      pgp fingerprint: 0960 F91A 3A09 905D D19A 59E1 0A5C A16E EF97 D1F9
+    </p>
+  </section>
+</IntersectionObserver>
 
 <style lang="scss">
   .about {
@@ -102,7 +115,7 @@
     padding: 10px;
     align-items: center;
     justify-content: center;
-    width:  max-content;
+    width: max-content;
     height: clamp(55px, 10vw, 100px);
     aspect-ratio: 1/1;
     transition: all 0.2s ease;
@@ -113,7 +126,8 @@
     width: max-content;
   }
 
-  .socials a:hover span, .socials a:focus-visible span {
+  .socials a:hover span,
+  .socials a:focus-visible span {
     display: block;
     font-size: clamp(15px, 3.5vw, 25px);
     margin-left: 10px;
