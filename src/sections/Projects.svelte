@@ -11,7 +11,7 @@
   let projects: Promise<StarredProject[]> = getProjects();
 </script>
 
-<IntersectionObserver once {element} bind:intersecting threshold={0.8}>
+<IntersectionObserver once {element} bind:intersecting threshold={0.4}>
   <section
     transition:slide={{
       axis: "y",
@@ -31,7 +31,7 @@
       {#if intersecting}
         <div in:slide class="projectItems">
           {#each projects as project, i}
-            {@const delay = 150 * (i - 0.3)}
+            {@const delay = 100 * (i - 0.3)}
             {#key project}
               <ProjectItem {project} {delay} />
             {/key}
