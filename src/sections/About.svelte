@@ -146,5 +146,6 @@
   .socials a:focus-visible {
     background-color: var(--projects-secondary);
     color: var(--projects-primary-hover);
+    aspect-ratio: initial;
   }
 </style>

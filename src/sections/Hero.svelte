@@ -152,21 +152,13 @@
   .hero::before {
     content: "";
     position: absolute;
-    display: grid;
-    place-self: center;
-    width: calc(100vw * 15);
-    height: calc(100vh * 5);
-    flex-shrink: 0;
-    top: -50vh;
-    bottom: 0;
-    transform-origin: center;
-    transform: translate(-50%, -50%);
-    background: radial-gradient(circle at 50% 0, #3d462f80, #ff000000 70.71%),
-      radial-gradient(circle at 6.7% 75%, #2b353080, #0000ff00 70.71%),
-      radial-gradient(circle at 93.3% 75%, #50573180, #00ff0000 70.71%)
+    width: 100vw;
+    height: calc(40vh + 20vw);
+    background: radial-gradient(circle at 50% 0, #2e352480, #ff000000 70.71%),
+      radial-gradient(circle at 6.7% 75%, #35584780, #0000ff00 70.71%),
+      radial-gradient(circle at 93.3% 75%, #84469480, #00ff0000 70.71%)
         rgb(5, 5, 5);
     background-size: 200% 200%;
-    animation: rotateGradient 120s linear infinite;
     z-index: 1;
     filter: blur(10px);
   }
@@ -182,5 +174,4 @@
     font-family: "agrandir-grand", sans-serif;
     overflow: hidden;
   }
-
 </style>
