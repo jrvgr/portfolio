@@ -1,20 +1,20 @@
 :root {
   --hero-primary: #2c2c2a;
   --hero-secondary: #d1ebd3;
-  --projects-background: #d8d3bf;
-  --projects-primary: #6e5858;
-  --projects-primary-hover: #312222;
-  --projects-secondary: #c0ba9f;
-  --projects-tertiary: #eee9d7;
+  --projects-background: #f3ead3;
+  --projects-primary: #55544a;
+  --projects-primary-hover: #1f1a1a;
+  --projects-secondary: #a5a086;
+  --projects-tertiary: #d1c9ae;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --projects-background: #353020;
-    --projects-primary: #91887c;
+    --projects-background: #1b1918;
+    --projects-primary: #8b8470;
     --projects-primary-hover: #cfbfa6;
-    --projects-secondary: #5a5245;
-    --projects-tertiary: #423c27;
+    --projects-secondary: #4d453d;
+    --projects-tertiary: #443d36;
   }
 }
 
