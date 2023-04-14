@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Marquee from "svelte-fast-marquee/";
   import TsIcon from "~icons/simple-icons/typescript";
   import SvelteIcon from "~icons/simple-icons/svelte";
   import HtmlIcon from "~icons/simple-icons/html5";
@@ -20,7 +19,7 @@
   import BrushIcon from "~icons/lucide/brush";
   import ViteIcon from "~icons/simple-icons/vite";
 
-  import { fade, slide } from "svelte/transition";
+  import { slide } from "svelte/transition";
 
   let activeTab: "frontend" | "backend" | "design" = "frontend";
 

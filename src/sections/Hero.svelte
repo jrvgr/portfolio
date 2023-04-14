@@ -1,7 +1,5 @@
 <script lang="ts">
   import Marquee from "svelte-fast-marquee";
-  import ArrowDown from "~icons/lucide/arrow-down";
-  import { getProjects } from "../api/github";
 
   function handleBlobMovement({ clientX, clientY }: MouseEvent) {
     const blob = document.querySelector(".blob");
@@ -17,8 +15,6 @@
 
   const functiondescription = "Creative Developer";
   const name = "Jacco Groen";
-
-  const repeatWord: number = 5;
 </script>
 
 <div class="remove-insert" style="display:none" />
