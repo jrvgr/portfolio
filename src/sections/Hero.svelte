@@ -9,7 +9,7 @@
     blob.animate(
       {
         left: `${clientX - 50}px`,
-        top: `${clientY - 50}px`,
+        top: `${clientY - 50 + window.scrollY}px`,
       },
       { duration: 3000, fill: "forwards" }
     );

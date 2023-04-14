@@ -18,10 +18,17 @@
   import CodeIcon from "~icons/lucide/code-2";
   import ServerIcon from "~icons/lucide/server";
   import BrushIcon from "~icons/lucide/brush";
+  import ViteIcon from "~icons/simple-icons/vite";
 
-  import { slide } from "svelte/transition";
+  import { fade, slide } from "svelte/transition";
 
   let activeTab: "frontend" | "backend" | "design" = "frontend";
+
+  function returnActiveTabArray(): {name: string, icon:any}[] {
+    if (activeTab === "design") return designSkills;
+    if (activeTab === "backend") return backendSkills;
+    return frontendSkills;
+  }
 
   const frontendSkills = [
     {
@@ -49,6 +56,10 @@
     {
       name: "Sass",
       icon: SassIcon,
+    },
+    {
+      name: "Vite",
+      icon: ViteIcon,
     },
   ];
 
@@ -125,28 +136,14 @@
       </button>
     </aside>
     <div class="skillsList">
-      {#if activeTab === "frontend"}
-        {#each frontendSkills as skill}
-          <div transition:slide class="skill">
+      {#key activeTab}
+        {#each returnActiveTabArray() as skill}
+          <div in:slide class="skill">
             <svelte:component this={skill.icon} />
             <span>{skill.name}</span>
           </div>
         {/each}
-      {:else if activeTab === "backend"}
-        {#each backendSkills as skill}
-          <div transition:slide class="skill">
-            <svelte:component this={skill.icon} />
-            <span>{skill.name}</span>
-          </div>
-        {/each}
-      {:else if activeTab === "design"}
-        {#each designSkills as skill}
-          <div transition:slide class="skill">
-            <svelte:component this={skill.icon} />
-            <span>{skill.name}</span>
-          </div>
-        {/each}
-      {/if}
+      {/key}
     </div>
   </div>
 </section>
@@ -155,7 +152,7 @@
   .skills {
     display: flex;
     flex-direction: column;
-    min-height: 650px;
+    min-height: 850px;
     color: var(--projects-primary);
     font-size: clamp(40px, 3vw, 1.3em);
     font-family: "corben", sans-serif;
