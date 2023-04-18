@@ -20,123 +20,107 @@
   import ViteIcon from "~icons/simple-icons/vite";
 
   import { slide } from "svelte/transition";
+  import { writable, type Writable } from "svelte/store";
+  import SkillsTabSwitcher from "../components/SkillsTabSwitcher.svelte";
 
-  let activeTab: "frontend" | "backend" | "design" = "frontend";
+  const activeTab: Writable<"frontend" | "backend" | "design"> =
+    writable("frontend");
 
-  function returnActiveTabArray(): {name: string, icon:any}[] {
-    if (activeTab === "design") return designSkills;
-    if (activeTab === "backend") return backendSkills;
-    return frontendSkills;
-  }
+  const skills = {
+    frontend: [
+      {
+        name: "Svelte",
+        icon: SvelteIcon,
+      },
+      {
+        name: "TypeScript",
+        icon: TsIcon,
+      },
 
-  const frontendSkills = [
-    {
-      name: "Svelte",
-      icon: SvelteIcon,
-    },
-    {
-      name: "TypeScript",
-      icon: TsIcon,
-    },
+      {
+        name: "JavaScript",
+        icon: JsIcon,
+      },
+      {
+        name: "HTML",
+        icon: HtmlIcon,
+      },
+      {
+        name: "CSS",
+        icon: CssIcon,
+      },
 
-    {
-      name: "JavaScript",
-      icon: JsIcon,
-    },
-    {
-      name: "HTML",
-      icon: HtmlIcon,
-    },
-    {
-      name: "CSS",
-      icon: CssIcon,
-    },
+      {
+        name: "Sass",
+        icon: SassIcon,
+      },
+      {
+        name: "Vite",
+        icon: ViteIcon,
+      },
+    ],
 
-    {
-      name: "Sass",
-      icon: SassIcon,
-    },
-    {
-      name: "Vite",
-      icon: ViteIcon,
-    },
-  ];
+    backend: [
+      {
+        name: "PHP",
+        icon: PhpIcon,
+      },
+      {
+        name: "MySQL",
+        icon: MySQlIcon,
+      },
+      {
+        name: "Bash",
+        icon: BashIcon,
+      },
+      {
+        name: "Git",
+        icon: GitIcon,
+      },
+      {
+        name: "GitHub",
+        icon: GithubIcon,
+      },
+      {
+        name: "Linux",
+        icon: LinuxIcon,
+      },
+    ],
 
-  const backendSkills = [
-    {
-      name: "PHP",
-      icon: PhpIcon,
-    },
-    {
-      name: "MySQL",
-      icon: MySQlIcon,
-    },
-    {
-      name: "Bash",
-      icon: BashIcon,
-    },
-    {
-      name: "Git",
-      icon: GitIcon,
-    },
-    {
-      name: "GitHub",
-      icon: GithubIcon,
-    },
-    {
-      name: "Linux",
-      icon: LinuxIcon,
-    },
-  ];
-
-  const designSkills = [
-    {
-      name: "Adobe Illustrator",
-      icon: AdobeAiIcon,
-    },
-    {
-      name: "Adobe Photoshop",
-      icon: AdobePsIcon,
-    },
-    {
-      name: "Figma",
-      icon: FigmaIcon,
-    },
-  ];
+    design: [
+      {
+        name: "Adobe Illustrator",
+        icon: AdobeAiIcon,
+      },
+      {
+        name: "Adobe Photoshop",
+        icon: AdobePsIcon,
+      },
+      {
+        name: "Figma",
+        icon: FigmaIcon,
+      },
+    ],
+  };
 </script>
 
 <section class="skills">
   <h1 class="skillsHeading">Skills:</h1>
   <div class="wrapper">
     <aside class="tabSelector">
-      <button
-        data-text="Frontend"
-        class:active={activeTab === "frontend"}
-        on:click={() => (activeTab = "frontend")}
-      >
+      <SkillsTabSwitcher {activeTab} tab={"frontend"}>
         <CodeIcon />
-        Frontend
-      </button>
-      <button
-        data-text="Backend"
-        class:active={activeTab === "backend"}
-        on:click={() => (activeTab = "backend")}
-      >
+      </SkillsTabSwitcher>
+      <SkillsTabSwitcher {activeTab} tab={"backend"}>
         <ServerIcon />
-        Backend
-      </button>
-      <button
-        data-text="Design"
-        class:active={activeTab === "design"}
-        on:click={() => (activeTab = "design")}
-      >
+      </SkillsTabSwitcher>
+      <SkillsTabSwitcher {activeTab} tab={"design"}>
         <BrushIcon />
-        Design
-      </button>
+      </SkillsTabSwitcher>
     </aside>
     <div class="skillsList">
-      {#key activeTab}
-        {#each returnActiveTabArray() as skill}
+      {#key $activeTab}
+        {#each skills[$activeTab] as skill}
           <div in:slide class="skill">
             <svelte:component this={skill.icon} />
             <span>{skill.name}</span>
@@ -198,53 +182,6 @@
       justify-content: center;
       align-items: center;
       margin-left: 0;
-    }
-  }
-
-  .tabSelector button {
-    position: relative;
-    color: var(--projects-primary);
-    width: max-content;
-    font-size: clamp(20px, 5vw, 1.3em);
-    background: none;
-    border: none;
-    font-family: "unbounded", sans-serif;
-    transition: all 0.1s ease-in-out;
-    text-decoration: none;
-    position: relative;
-    padding-bottom: 1em;
-    overflow: hidden;
-    cursor: pointer;
-    &.active {
-      color: var(--projects-primary-hover);
-    }
-    @media (min-width: 768px) {
-      &.active:after {
-        position: absolute;
-        z-index: 3;
-        top: -0.25em;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        white-space: nowrap;
-        content: attr(data-text) attr(data-text);
-        color: transparent;
-        line-height: 1.8;
-        text-underline-offset: 0.3em;
-        text-decoration: underline;
-        text-decoration-style: wavy;
-        text-decoration-color: #af3838;
-        animation: wavy-slide 10s linear infinite;
-      }
-    }
-    &:hover {
-      color: var(--projects-primary-hover);
-    }
-  }
-
-  @keyframes wavy-slide {
-    to {
-      margin-left: -51%;
     }
   }
 

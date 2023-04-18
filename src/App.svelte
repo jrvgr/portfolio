@@ -5,8 +5,9 @@
   import About from "./sections/About.svelte";
 </script>
 
-<Hero />
-<Skills />
-<About />
-<Projects />
-
+<main>
+  <Hero />
+  <Skills />
+  <About />
+  <Projects />
+</main>
