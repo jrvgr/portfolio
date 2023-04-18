@@ -184,11 +184,7 @@
       margin-left: 0;
     }
   }
-
-  .active {
-    text-decoration: wavy underline #af3838;
-  }
-
+  
   .skillsList {
     display: flex;
     flex-direction: column;
