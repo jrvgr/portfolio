@@ -15,7 +15,7 @@
     <p class="aboutText">
       I'm a 17-year-old creative developer who's been passionate about computers
       since the age of 7. Two years ago, I started programming and quickly fell
-      in love with it. In my free time, I enjoy skateboarding and listening to
+      in love with it early in 2021. In my free time, I enjoy skateboarding and listening to
       music, which helps me find inspiration for my work. I'm always eager to
       learn and take on new projects, whether it's developing software or
       creating visually stunning designs.
