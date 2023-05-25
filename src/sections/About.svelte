@@ -157,7 +157,8 @@
 
   .me {
     transition: all 0.2s ease;
-    &:hover, &.hovered {
+    &:hover,
+    &.hovered {
       filter: brightness(0.2);
       @media screen and (prefers-color-scheme: dark) {
         filter: brightness(1.8);
@@ -173,7 +174,7 @@
   img {
     transition: all 0.3s ease, top 0.2s ease;
     width: clamp(150px, 30vw, 350px);
-    border-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/stamp-border.png)
+    border-image: url(/stamp-border.png)
       8 round;
     border-width: 8px;
     border-style: solid;
