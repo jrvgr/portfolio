@@ -9,6 +9,10 @@
   let intersecting;
 
   let projects: Promise<StarredProject[]> = getProjects();
+
+  function animationDelay(i: number) {
+    return 100 * (i - 0.3);
+  }
 </script>
 
 <IntersectionObserver once {element} bind:intersecting threshold={0.4}>
@@ -31,9 +35,8 @@
       {#if intersecting}
         <div in:slide class="projectItems">
           {#each projects as project, i}
-            {@const delay = 100 * (i - 0.3)}
             {#key project}
-              <ProjectItem {project} {delay} />
+              <ProjectItem {project} delay={animationDelay(i)} />
             {/key}
           {/each}
         </div>

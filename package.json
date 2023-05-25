@@ -17,7 +17,6 @@
     "@tsconfig/svelte": "^3.0.0",
     "svelte": "^3.55.1",
     "svelte-check": "^2.10.3",
-    "svelte-fast-marquee": "^0.4.1",
     "svelte-intersection-observer": "^0.10.0",
     "tslib": "^2.5.0",
     "typescript": "^4.9.3",
@@ -26,6 +25,8 @@
     "vite": "^4.2.0"
   },
   "dependencies": {
-    "scss": "^0.2.4"
+    "dayjs": "^1.11.7",
+    "scss": "^0.2.4",
+    "svelte-marquee": "^0.1.4"
   }
 }

@@ -308,6 +308,11 @@ cross-spawn@^7.0.3:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
+dayjs@^1.11.7:
+  version "1.11.7"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.7.tgz#4b296922642f70999544d1144a2c25730fce63e2"
+  integrity sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==
+
 debug@^4.3.4:
   version "4.3.4"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
@@ -871,11 +876,6 @@ svelte-check@^2.10.3:
     svelte-preprocess "^4.0.0"
     typescript "*"
 
-svelte-fast-marquee@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/svelte-fast-marquee/-/svelte-fast-marquee-0.4.1.tgz#f564710e70fe4f878e07a3d8145cc2f0946ce9fd"
-  integrity sha512-M5fqQlFZZugoUQo6mOrer0QSe+XTmJnX4x+06x6S07Wlvy0dA8P9xjajPv8QymJgTCMVGHiv2KN16MgIp6JU/g==
-
 svelte-hmr@^0.15.1:
   version "0.15.1"
   resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.15.1.tgz#d11d878a0bbb12ec1cba030f580cd2049f4ec86b"
@@ -885,6 +885,11 @@ svelte-intersection-observer@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/svelte-intersection-observer/-/svelte-intersection-observer-0.10.0.tgz#6f9ff6c235ee80b761c169406e389ff15d1e8f3a"
   integrity sha512-GdOTMSrRpoBciMe+NbocsHOBvqKJ5OiL5H8Jz4mBoDGHba9VOI4oGeXAmMOmh8mi5gq95+0b0DVI+6alcQ7TCA==
+
+svelte-marquee@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/svelte-marquee/-/svelte-marquee-0.1.4.tgz#d24c8c5f50edc257464fe47dd871f64adfcf4bc3"
+  integrity sha512-48hfXcFUy2EF72NhAcQjvxEdQVHDr5JnBOguzf1fq/+n6ZpHbiC5zRg8W7MOb0spAbWLR9km3wb+rRHN0AX7DA==
 
 svelte-preprocess@^4.0.0:
   version "4.10.7"

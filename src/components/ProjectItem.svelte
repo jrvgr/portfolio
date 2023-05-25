@@ -1,7 +1,7 @@
 <script lang="ts">
   import { fly } from "svelte/transition";
   import GithubIcon from "~icons/line-md/github-twotone";
-  import StarIcon from "~icons/line-md/heart-filled";
+  import StarIcon from "~icons/line-md/heart-twotone";
   import type { StarredProject } from "../api/github";
 
   export let project: StarredProject = {} as any;

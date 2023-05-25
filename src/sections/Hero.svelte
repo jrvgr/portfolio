@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Marquee from "svelte-fast-marquee";
+  import Marquee from "svelte-marquee";
 
   function handleBlobMovement({ clientX, clientY }: MouseEvent) {
     const blob = document.querySelector(".blob");
@@ -23,37 +23,18 @@
   <span class="blob" />
   <span class="blob-blur" />
   <div class="text">
-    <Marquee speed={20} direction="right">
-      <h1 class="name">{name}</h1>
-      <h1 class="name">{name}</h1>
-      <h1 class="name">{name}</h1>
-      <h1 class="name">{name}</h1>
-      <h1 class="name">{name}</h1>
-      <h1 class="name">{name}</h1>
-    </Marquee>
-    <Marquee speed={15} direction="left">
-      <h1 class="role">
-        {functiondescription}
-      </h1>
-      <h1 class="role">
-        {functiondescription}
-      </h1>
-      <h1 class="role">
-        {functiondescription}
-      </h1>
-      <h1 class="role">
-        {functiondescription}
-      </h1>
-      <h1 class="role">
-        {functiondescription}
-      </h1>
-      <h1 class="role">
-        {functiondescription}
-      </h1>
-      <h1 class="role">
-        {functiondescription}
-      </h1>
-    </Marquee>
+    <div class="name">
+      <Marquee content={name} hoverable={false} autoplay speed="medium" />
+    </div>
+    <div class="role">
+      <Marquee
+        content={functiondescription}
+        hoverable={false}
+        reverse
+        autoplay
+        speed="medium"
+      />
+    </div>
   </div>
 </section>
 
@@ -68,19 +49,22 @@
   .role {
     color: var(--hero-secondary);
     font-size: clamp(25px, 3vw, 50px);
-    margin: 0 20px;
     font-weight: 450;
     font-family: "corben", sans-serif;
+    :global(span) {
+      margin: 0 clamp(10px, 1vw, 30px);
+    }
   }
 
   .name {
     color: var(--hero-secondary);
     font-size: clamp(35px, 6vw, 70px);
-    margin: 0 clamp(1px, 3vw, 30px);
     font-weight: 800;
     font-family: "unbounded", sans-serif;
-    font-style: wide;
     position: relative;
+    :global(span) {
+      margin: 0 clamp(10px, 1vw, 30px);
+    }
   }
 
   .hero * {

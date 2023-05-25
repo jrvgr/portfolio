@@ -1,24 +1,46 @@
 <script lang="ts">
+  import day from "dayjs";
+  import relativeTime from "dayjs/plugin/relativeTime";
   import LinkedIn from "~icons/line-md/linkedin";
   import GitHub from "~icons/line-md/github";
   import Mail from "~icons/line-md/email";
-
   import IntersectionObserver from "svelte-intersection-observer";
+
+  day.extend(relativeTime);
+
+  let meIsHovered = false;
 
   let element;
   let intersecting;
+
+  let yearsSince = (year) => new Date().getFullYear() - year;
 </script>
 
 <IntersectionObserver {element} bind:intersecting threshold={0}>
   <section class="about">
-    <h1 class="aboutHeading">About me</h1>
+    <h1 class="aboutHeading">
+      About <span
+        class:hovered={meIsHovered}
+        on:mouseenter={() => (meIsHovered = true)}
+        on:mouseleave={() => (meIsHovered = false)}
+        class="me">me</span
+      >
+    </h1>
+    <img
+      on:mouseenter={() => (meIsHovered = true)}
+      on:mouseleave={() => (meIsHovered = false)}
+      class:hovered={meIsHovered}
+      src="/me.jpg"
+      alt="Jacco"
+    />
     <p class="aboutText">
-      I'm a 17-year-old creative developer who's been passionate about computers
-      since the age of 7. Two years ago, I started programming and quickly fell
-      in love with it early in 2021. In my free time, I enjoy skateboarding and listening to
-      music, which helps me find inspiration for my work. I'm always eager to
-      learn and take on new projects, whether it's developing software or
-      creating visually stunning designs.
+      I'm a {day("2006-02-09").toNow().match(/\d+/)[0]}-year-old creative
+      developer who's been passionate about computers since the age of 7. {day(
+        "2021-08-07"
+      ).toNow(true)} ago I started programming and quickly fell in love with it.
+      In my free time, i enjoy skateboarding and listening to music, which helps
+      me find inspiration for my work. I'm always eager to learn and take on new
+      projects, whether it's developing software or creating visually stunning designs.
     </p>
     <div bind:this={element} class="socials">
       <a
@@ -27,19 +49,27 @@
         target="_blank"
       >
         {#if intersecting}
-        <LinkedIn />
+          <LinkedIn />
         {/if}
         <span id="linkedintext">jacco-groen</span>
       </a>
-      <a aria-labelledby="githubtext" href="https://github.com/J-Groen" target="_blank">
+      <a
+        aria-labelledby="githubtext"
+        href="https://github.com/J-Groen"
+        target="_blank"
+      >
         {#if intersecting}
-        <GitHub />
+          <GitHub />
         {/if}
         <span id="githubtext">J-Groen</span>
       </a>
-      <a aria-labelledby="mailtext" href="mailto:jacco.groen@protonmail.com" target="_blank">
+      <a
+        aria-labelledby="mailtext"
+        href="mailto:jacco.groen@protonmail.com"
+        target="_blank"
+      >
         {#if intersecting}
-        <Mail />
+          <Mail />
         {/if}
         <span id="mailtext">jacco.groen@protonmail.com</span>
       </a>
@@ -58,15 +88,15 @@
     padding: 20px;
     max-width: 1920px;
     margin: 0 auto;
+    position: relative;
     font-family: "inter", sans-serif;
     font-weight: 500;
     transition: all 0.2s ease;
     color: var(--projects-primary);
   }
 
-  .about * {
-    transition: font-size 0.05s linear;
-    transition: color 0.1s ease;
+  .about:is(p, h1) {
+    transition: font-size 0.05s linear, color 0, 2s;
     -moz-transition: font-size 0.2s ease;
   }
 
@@ -84,7 +114,10 @@
 
   .about p {
     font-size: clamp(15px, 3.5vw, 25px);
-    max-width: 1000px;
+    width: clamp(300px, 55vw, 1200px);
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   .fingerprint {
@@ -122,9 +155,41 @@
     transition: all 0.2s ease;
   }
 
+  .me {
+    transition: all 0.2s ease;
+    &:hover, &.hovered {
+      filter: brightness(0.2);
+      @media screen and (prefers-color-scheme: dark) {
+        filter: brightness(1.8);
+      }
+    }
+  }
+
   .socials a span {
     display: none;
     width: max-content;
+  }
+
+  img {
+    transition: all 0.3s ease, top 0.2s ease;
+    width: clamp(150px, 30vw, 350px);
+    border-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/stamp-border.png)
+      8 round;
+    border-width: 8px;
+    border-style: solid;
+    position: absolute;
+
+    right: clamp(40px, calc(20vw - 200px), 70px);
+    rotate: 5deg;
+    top: 0;
+    &:hover,
+    &.hovered {
+      rotate: 10deg;
+    }
+    @media (max-width: 768px) {
+      top: calc(-230px - 5vw);
+      right: 50px;
+    }
   }
 
   .socials a:hover span,
@@ -136,6 +201,7 @@
     font-weight: 500;
     font-stretch: expanded;
     color: var(--projects-primary-hover);
+    float: right;
   }
 
   :global(.socials .icon) {

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Skills from "./Skills.svelte";
   import TsIcon from "~icons/simple-icons/typescript";
   import SvelteIcon from "~icons/simple-icons/svelte";
   import HtmlIcon from "~icons/simple-icons/html5";
@@ -19,7 +20,7 @@
   import BrushIcon from "~icons/lucide/brush";
   import ViteIcon from "~icons/simple-icons/vite";
 
-  import { slide } from "svelte/transition";
+  import { slide, fly } from "svelte/transition";
   import { writable, type Writable } from "svelte/store";
   import SkillsTabSwitcher from "../components/SkillsTabSwitcher.svelte";
 
@@ -120,8 +121,16 @@
     </aside>
     <div class="skillsList">
       {#key $activeTab}
-        {#each skills[$activeTab] as skill}
-          <div in:slide class="skill">
+        {#each skills[$activeTab] as skill, i}
+          {@const delay = i * 35}
+          {@const totalItems = skills[$activeTab].length}
+          {@const inDelay = totalItems - i * 45}
+          <div
+            in:fly={{ delay: inDelay + 300 + totalItems * 100, y: -100 }}
+            out:fly={{ x: 180, delay, duration: 320 }}
+            class="skill"
+          >
+            <!-- <div in:slide={{delay: inDelay + 500 + totalItems * 100}} out:slide={{delay, duration: 100}} class="skill"> -->
             <svelte:component this={skill.icon} />
             <span>{skill.name}</span>
           </div>
@@ -135,15 +144,20 @@
   .skills {
     display: flex;
     flex-direction: column;
-    min-height: 850px;
-    color: var(--projects-primary);
     font-size: clamp(40px, 3vw, 1.3em);
+    color: var(--projects-primary);
     font-family: "corben", sans-serif;
     padding: 30px 0;
     gap: 20px;
     @media (max-width: 768px) {
       min-height: 450px;
     }
+    align-items: center;
+  }
+
+  .skills > * {
+    width: 100%;
+    max-width: calc(1920px / 2);
   }
 
   .skillsHeading {
@@ -162,6 +176,7 @@
   .wrapper {
     display: flex;
     flex-direction: row;
+    max-width: 1920px;
     @media (max-width: 768px) {
       flex-direction: column;
     }
@@ -184,7 +199,7 @@
       margin-left: 0;
     }
   }
-  
+
   .skillsList {
     display: flex;
     flex-direction: column;
@@ -194,6 +209,7 @@
     align-items: flex-start;
     text-align: left;
     font-size: clamp(20px, 4vw, 1.2em);
+    height: 20ch;
     @media (max-width: 768px) {
       display: flex;
       margin: 0 auto;
@@ -201,6 +217,7 @@
       width: 100%;
       padding: 0 40px;
     }
+    overflow: hidden;
   }
 
   .skillsList .skill {
