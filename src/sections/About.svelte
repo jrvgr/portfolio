@@ -74,9 +74,14 @@
         <span id="mailtext">jacco.groen@protonmail.com</span>
       </a>
     </div>
-    <p class="fingerprint">
+    <a
+      href="https://github.com/J-Groen.gpg"
+      referrerpolicy="no-referrer"
+      target="_blank"
+      class="fingerprint"
+    >
       pgp fingerprint: 0960 F91A 3A09 905D D19A 59E1 0A5C A16E EF97 D1F9
-    </p>
+    </a>
   </section>
 </IntersectionObserver>
 
