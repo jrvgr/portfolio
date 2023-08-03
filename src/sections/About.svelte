@@ -55,27 +55,27 @@
       </a>
       <a
         aria-labelledby="githubtext"
-        href="https://github.com/J-Groen"
+        href="https://github.com/jrvgr"
         target="_blank"
       >
         {#if intersecting}
           <GitHub />
         {/if}
-        <span id="githubtext">J-Groen</span>
+        <span id="githubtext">jrvgr</span>
       </a>
       <a
         aria-labelledby="mailtext"
-        href="mailto:jacco.groen@protonmail.com"
+        href="mailto:jacco@groen.fyi"
         target="_blank"
       >
         {#if intersecting}
           <Mail />
         {/if}
-        <span id="mailtext">jacco.groen@protonmail.com</span>
+        <span id="mailtext">jacco@groen.fyi</span>
       </a>
     </div>
     <a
-      href="https://github.com/J-Groen.gpg"
+      href="https://github.com/jrvgr.gpg"
       referrerpolicy="no-referrer"
       target="_blank"
       class="fingerprint"
