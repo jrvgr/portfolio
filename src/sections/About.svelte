@@ -34,7 +34,7 @@
       alt="Jacco"
     />
     <p class="aboutText">
-      I'm a {day("2006-02-09").toNow().match(/\d+/)[0]}-year-old creative
+      I'm a {day("2006-09-02").toNow().match(/\d+/)[0]}-year-old creative
       developer who's been passionate about computers since the age of 7. {day(
         "2021-08-07"
       ).toNow(true)} ago I started programming and quickly fell in love with it.
