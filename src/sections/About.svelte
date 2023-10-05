@@ -10,10 +10,8 @@
 
   let meIsHovered = false;
 
-  let element;
-  let intersecting;
-
-  let yearsSince = (year) => new Date().getFullYear() - year;
+  let element: HTMLDivElement;
+  let intersecting: boolean;
 </script>
 
 <IntersectionObserver {element} bind:intersecting threshold={0}>
@@ -34,13 +32,12 @@
       alt="Jacco"
     />
     <p class="aboutText">
-      I'm a {day("2006-09-02").toNow().match(/\d+/)[0]}-year-old creative
-      developer who's been passionate about computers since the age of 7. {day(
-        "2021-08-07"
-      ).toNow(true)} ago I started programming and quickly fell in love with it.
-      In my free time, i enjoy skateboarding and listening to music, which helps
-      me find inspiration for my work. I'm always eager to learn and take on new
-      projects, whether it's developing software or creating visually stunning designs.
+      I'm a {day("2006-09-02").toNow()} old creative developer who's been passionate
+      about computers since the age of seven. {day("2021-08-07").toNow(true)} ago I started
+      programming and quickly fell in love with it. In my free time, i enjoy skateboarding
+      and listening to music, which helps me find inspiration for my work. I'm always
+      eager to learn and take on new projects, whether it's developing software or
+      creating visually stunning designs.
     </p>
     <div bind:this={element} class="socials">
       <a

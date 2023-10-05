@@ -26,7 +26,6 @@
   },
   "dependencies": {
     "dayjs": "^1.11.7",
-    "scss": "^0.2.4",
-    "svelte-marquee": "^0.1.4"
+    "scss": "^0.2.4"
   }
 }

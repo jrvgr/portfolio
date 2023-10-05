@@ -5,8 +5,8 @@
   import SadFace from "~icons/line-md/emoji-frown";
   import { slide } from "svelte/transition";
   import IntersectionObserver from "svelte-intersection-observer";
-  let element;
-  let intersecting;
+  let element!: HTMLElement;
+  let intersecting: boolean = false;
 
   let projects: Promise<StarredProject[]> = getProjects();
 

@@ -861,11 +861,6 @@ svelte-intersection-observer@^0.10.0:
   resolved "https://registry.yarnpkg.com/svelte-intersection-observer/-/svelte-intersection-observer-0.10.0.tgz#6f9ff6c235ee80b761c169406e389ff15d1e8f3a"
   integrity sha512-GdOTMSrRpoBciMe+NbocsHOBvqKJ5OiL5H8Jz4mBoDGHba9VOI4oGeXAmMOmh8mi5gq95+0b0DVI+6alcQ7TCA==
 
-svelte-marquee@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/svelte-marquee/-/svelte-marquee-0.1.4.tgz#d24c8c5f50edc257464fe47dd871f64adfcf4bc3"
-  integrity sha512-48hfXcFUy2EF72NhAcQjvxEdQVHDr5JnBOguzf1fq/+n6ZpHbiC5zRg8W7MOb0spAbWLR9km3wb+rRHN0AX7DA==
-
 svelte-preprocess@^4.0.0:
   version "4.10.7"
   resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-4.10.7.tgz#3626de472f51ffe20c9bc71eff5a3da66797c362"

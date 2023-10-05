@@ -1,9 +1,8 @@
 <script lang="ts">
-  import Marquee from "svelte-marquee";
+  import Marquee from "../components/Marquee.svelte";
+  let blob: HTMLSpanElement;
 
   function handleBlobMovement({ clientX, clientY }: MouseEvent) {
-    const blob = document.querySelector(".blob");
-
     blob.animate(
       {
         left: `${clientX - 50}px`,
@@ -20,20 +19,19 @@
 <div class="remove-insert" style="display:none" />
 
 <section id="hero" on:pointermove={handleBlobMovement} class="hero">
-  <span class="blob" />
+  <span bind:this={blob} class="blob" />
   <span class="blob-blur" />
   <div class="text">
     <div class="name">
-      <Marquee content={name} hoverable={false} autoplay speed="medium" />
+      <Marquee
+        text={name}
+        duration={25}
+        forwards
+        --font-size=" clamp(35px, 6vw, 50px)"
+      />
     </div>
     <div class="role">
-      <Marquee
-        content={functiondescription}
-        hoverable={false}
-        reverse
-        autoplay
-        speed="medium"
-      />
+      <Marquee text={functiondescription} duration={20} --font-size="clamp(25px, 3vw, 40px)" />
     </div>
   </div>
 </section>
