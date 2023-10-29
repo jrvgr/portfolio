@@ -32,7 +32,7 @@
       alt="Jacco"
     />
     <p class="aboutText">
-      I'm a {day("2006-09-02").toNow()} old creative developer who's been passionate
+      I'm a {day("2006-09-02").toNow(true)} old creative developer who's been passionate
       about computers since the age of seven. {day("2021-08-07").toNow(true)} ago I started
       programming and quickly fell in love with it. In my free time, i enjoy skateboarding
       and listening to music, which helps me find inspiration for my work. I'm always
